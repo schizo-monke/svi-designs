@@ -49,13 +49,24 @@ const DesignDetail = () => {
   const characteristics = [
     { label: 'Design Name', value: design.design_name },
     { label: 'Index', value: design.index },
-    { label: 'Barrel Style', value: design.barrel_style || 'Not specified' },
-    { label: 'Barrel Length', value: design.barrel_length ? `${design.barrel_length}"` : 'Not specified' },
-    { label: 'Frame/Grip Material', value: design.frame_grip_material || 'Not specified' },
-    { label: 'Grip Style', value: design.grip_style || 'Not specified' },
-    { label: 'Release Date', value: design.release_date || 'Not specified' },
     { label: 'Drop Cycle', value: design.drop_cycle ? `Cycle ${design.drop_cycle}` : 'Not specified' },
-    { label: 'Serrations', value: design.serrations || 'Not specified' }
+    { label: 'Barrel Length', value: design.barrel_length ? `${design.barrel_length}"` : 'Not specified' },
+    { label: 'Barrel Type', value: design.barrel_type || 'Not specified' },
+    { label: 'Frame Material', value: design.frame_material || 'Not specified' },
+    { label: 'Grip Texture', value: design.grip_texture || 'Not specified' },
+    { label: 'Trigger Guard', value: design.trigger_guard || 'Not specified' },
+    { label: 'Grip Length', value: design.grip_length || 'Not specified' },
+    { label: 'Slide Serrations', value: design.slide_serrations || 'Not specified' },
+    { label: 'Full Slide Serrations', value: design.full_slide_serrations || 'Not specified' },
+    { label: 'Cheekbuster', value: design.cheekbuster || 'Not specified' },
+    { label: 'Irons/Dot', value: design.irons_dot || 'Not specified' },
+    { label: 'Tumbled Grip', value: design.tumbled_grip || 'Not specified' },
+    { label: 'Blast Pattern', value: design.blast_pattern || 'Not specified' },
+    { label: 'Slide Engraving', value: design.slide_engraving || 'Not specified' },
+    { label: 'Rollmark Font', value: design.rollmark_font || 'Not specified' },
+    { label: 'Dust Cover Cut', value: design.dust_cover_cut || 'Not specified' },
+    { label: 'Compensator', value: design.compensator || 'Not specified' },
+    { label: 'Release Date', value: design.release_date || 'Not specified' }
   ];
 
   return (
@@ -80,11 +91,11 @@ const DesignDetail = () => {
         <div className="design-card-detail">
           <div className="design-info">
             <h3>{design.design_name}</h3>
-            <div className="design-specs">
-              {design.barrel_style && (
+            <div className="design-specs-grid">
+              {design.drop_cycle && (
                 <div className="spec-item">
-                  <span className="spec-label">Barrel Style:</span>
-                  <span className="spec-value">{design.barrel_style}</span>
+                  <span className="spec-label">Drop Cycle:</span>
+                  <span className="spec-value">Cycle {design.drop_cycle}</span>
                 </div>
               )}
               {design.barrel_length && (
@@ -93,34 +104,100 @@ const DesignDetail = () => {
                   <span className="spec-value">{design.barrel_length}"</span>
                 </div>
               )}
-              {design.frame_grip_material && (
+              {design.barrel_type && (
                 <div className="spec-item">
-                  <span className="spec-label">Frame/Grip Material:</span>
-                  <span className="spec-value">{design.frame_grip_material}</span>
+                  <span className="spec-label">Barrel Type:</span>
+                  <span className="spec-value">{design.barrel_type}</span>
                 </div>
               )}
-              {design.grip_style && (
+              {design.frame_material && (
                 <div className="spec-item">
-                  <span className="spec-label">Grip Style:</span>
-                  <span className="spec-value">{design.grip_style}</span>
+                  <span className="spec-label">Frame Material:</span>
+                  <span className="spec-value">{design.frame_material}</span>
                 </div>
               )}
-              {design.serrations && (
+              {design.grip_texture && (
                 <div className="spec-item">
-                  <span className="spec-label">Serrations:</span>
-                  <span className="spec-value">{design.serrations}</span>
+                  <span className="spec-label">Grip Texture:</span>
+                  <span className="spec-value">{design.grip_texture}</span>
+                </div>
+              )}
+              {design.trigger_guard && (
+                <div className="spec-item">
+                  <span className="spec-label">Trigger Guard:</span>
+                  <span className="spec-value">{design.trigger_guard}</span>
+                </div>
+              )}
+              {design.grip_length && (
+                <div className="spec-item">
+                  <span className="spec-label">Grip Length:</span>
+                  <span className="spec-value">{design.grip_length}</span>
+                </div>
+              )}
+              {design.slide_serrations && (
+                <div className="spec-item">
+                  <span className="spec-label">Slide Serrations:</span>
+                  <span className="spec-value">{design.slide_serrations}</span>
+                </div>
+              )}
+              {design.full_slide_serrations && (
+                <div className="spec-item">
+                  <span className="spec-label">Full Slide Serrations:</span>
+                  <span className="spec-value">{design.full_slide_serrations}</span>
+                </div>
+              )}
+              {design.cheekbuster && (
+                <div className="spec-item">
+                  <span className="spec-label">Cheekbuster:</span>
+                  <span className="spec-value">{design.cheekbuster}</span>
+                </div>
+              )}
+              {design.irons_dot && (
+                <div className="spec-item">
+                  <span className="spec-label">Irons/Dot:</span>
+                  <span className="spec-value">{design.irons_dot}</span>
+                </div>
+              )}
+              {design.tumbled_grip && (
+                <div className="spec-item">
+                  <span className="spec-label">Tumbled Grip:</span>
+                  <span className="spec-value">{design.tumbled_grip}</span>
+                </div>
+              )}
+              {design.blast_pattern && (
+                <div className="spec-item">
+                  <span className="spec-label">Blast Pattern:</span>
+                  <span className="spec-value">{design.blast_pattern}</span>
+                </div>
+              )}
+              {design.slide_engraving && (
+                <div className="spec-item">
+                  <span className="spec-label">Slide Engraving:</span>
+                  <span className="spec-value">{design.slide_engraving}</span>
+                </div>
+              )}
+              {design.rollmark_font && (
+                <div className="spec-item">
+                  <span className="spec-label">Rollmark Font:</span>
+                  <span className="spec-value">{design.rollmark_font}</span>
+                </div>
+              )}
+              {design.dust_cover_cut && (
+                <div className="spec-item">
+                  <span className="spec-label">Dust Cover Cut:</span>
+                  <span className="spec-value">{design.dust_cover_cut}</span>
+                </div>
+              )}
+              {design.compensator && (
+                <div className="spec-item">
+                  <span className="spec-label">Compensator:</span>
+                  <span className="spec-value">{design.compensator}</span>
                 </div>
               )}
               {design.release_date && (
                 <div className="spec-item">
                   <span className="spec-label">Release Date:</span>
                   <span className="spec-value">{design.release_date}</span>
-                </div>
-              )}
-              {design.drop_cycle && (
-                <div className="spec-item">
-                  <span className="spec-label">Drop Cycle:</span>
-                  <span className="spec-value">Cycle {design.drop_cycle}</span>
                 </div>
               )}
             </div>
