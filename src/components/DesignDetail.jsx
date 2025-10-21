@@ -59,85 +59,64 @@ const DesignDetail = () => {
 
   return (
     <div className="design-detail">
-      <div className="detail-header">
-        <button onClick={() => navigate('/')} className="back-button">
-          ← Back to Search
-        </button>
-        <h1>{design.design_name}</h1>
-      </div>
-
       <div className="detail-content">
-        <div className="media-section">
-          <div className="media-gallery">
-            <div className="media-display">
-              {!mediaError ? (
-                currentMedia.type === 'video' ? (
-                  <video
-                    src={currentMedia.src}
-                    controls
-                    onError={handleMediaError}
-                    className="media-content"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img
-                    src={currentMedia.src}
-                    alt={`${design.design_name} - ${currentMedia.name}`}
-                    onError={handleMediaError}
-                    className="media-content"
-                  />
-                )
-              ) : (
-                <div className="media-error">
-                  <p>Media not available</p>
-                  <p>{currentMedia.name}</p>
-                </div>
-              )}
-            </div>
-
-            <div className="media-controls">
-              <button onClick={prevMedia} className="media-nav-btn">
-                ← Previous
-              </button>
-              <span className="media-info">
-                {currentMedia.name} ({currentMediaIndex + 1} of {mediaFiles.length})
-              </span>
-              <button onClick={nextMedia} className="media-nav-btn">
-                Next →
-              </button>
-            </div>
-
-            <div className="media-thumbnails">
-              {mediaFiles.map((media, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setCurrentMediaIndex(idx);
-                    setMediaError(false);
-                  }}
-                  className={`media-thumbnail ${idx === currentMediaIndex ? 'active' : ''}`}
-                >
-                  {media.type === 'video' ? '🎥' : '🖼️'} {media.name}
-                </button>
-              ))}
-            </div>
+        {/* Design Image */}
+        <div className="design-image-large">
+          <img
+            src={`/assets/${design.index}/thumbnail.png`}
+            alt={`${design.design_name} thumbnail`}
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div className="no-image" style={{ display: 'none' }}>
+            <span>No Image</span>
           </div>
         </div>
 
-        <div className="characteristics-section">
-          <h2>Design Characteristics</h2>
-          <div className="characteristics-table">
-            <table>
-              <tbody>
-                {characteristics.map((char, idx) => (
-                  <tr key={idx}>
-                    <td className="characteristic-label">{char.label}:</td>
-                    <td className="characteristic-value">{char.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {/* Design Card */}
+        <div className="design-card-detail">
+          <div className="design-info">
+            <h3>{design.design_name}</h3>
+            <div className="design-specs">
+              {design.barrel_style && (
+                <div className="spec-item">
+                  <span className="spec-label">Barrel Style:</span>
+                  <span className="spec-value">{design.barrel_style}</span>
+                </div>
+              )}
+              {design.barrel_length && (
+                <div className="spec-item">
+                  <span className="spec-label">Barrel Length:</span>
+                  <span className="spec-value">{design.barrel_length}"</span>
+                </div>
+              )}
+              {design.frame_grip_material && (
+                <div className="spec-item">
+                  <span className="spec-label">Frame/Grip Material:</span>
+                  <span className="spec-value">{design.frame_grip_material}</span>
+                </div>
+              )}
+              {design.grip_style && (
+                <div className="spec-item">
+                  <span className="spec-label">Grip Style:</span>
+                  <span className="spec-value">{design.grip_style}</span>
+                </div>
+              )}
+              {design.release_date && (
+                <div className="spec-item">
+                  <span className="spec-label">Release Date:</span>
+                  <span className="spec-value">{design.release_date}</span>
+                </div>
+              )}
+              {design.drop_cycle && (
+                <div className="spec-item">
+                  <span className="spec-label">Drop Cycle:</span>
+                  <span className="spec-value">Cycle {design.drop_cycle}</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

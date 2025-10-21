@@ -8,7 +8,14 @@ function App() {
     <Router>
       <div className="App">
         <header className="app-header">
-          <h1>SVI Infinity Designs</h1>
+          <div className="header-logo">
+            <img
+              src="/assets/logo_red.png"
+              alt="SVI Infinity Logo"
+              className="header-logo-img"
+            />
+          </div>
+          <h1>SVI Infinity - Drop Designs</h1>
         </header>
         <main>
           <Routes>
