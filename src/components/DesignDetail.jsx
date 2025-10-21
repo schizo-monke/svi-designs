@@ -105,6 +105,12 @@ const DesignDetail = () => {
                   <span className="spec-value">{design.grip_style}</span>
                 </div>
               )}
+              {design.serrations && (
+                <div className="spec-item">
+                  <span className="spec-label">Serrations:</span>
+                  <span className="spec-value">{design.serrations}</span>
+                </div>
+              )}
               {design.release_date && (
                 <div className="spec-item">
                   <span className="spec-label">Release Date:</span>

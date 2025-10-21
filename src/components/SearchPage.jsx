@@ -221,9 +221,9 @@ const SearchPage = () => {
                         {design.barrel_length && <span>{design.barrel_length}"</span>}
                         {design.frame_grip_material && <span>{design.frame_grip_material}</span>}
                         {design.grip_style && <span>{design.grip_style}</span>}
+                        {design.serrations && <span>{design.serrations}</span>}
                         {design.release_date && <span>{design.release_date}</span>}
                         {design.drop_cycle && <span>Cycle {design.drop_cycle}</span>}
-                        {design.serrations && <span>{design.serrations}</span>}
                       </div>
                     </div>
                   </div>
