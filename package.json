@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "aws-amplify": "^6.15.7",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.16.1",
