@@ -1,77 +1,72 @@
-design_name,index,barrel_style,barrel_length,frame_grip_material,grip_style,release_date
-Rude Boy,192,Island - IMM,5,Steel,Macropockets,2025-10-17
-Marlboro Red,190,Island,5,Steel,172 Skater Terrain,2025-10-15
-Lemon,189,Bull,3.75,Steel,Space Invaders,2025-10-13
-Rare Air,191,Island,4.5,Titanium,Space Invaders,2025-10-10
-Goodums,188,Island,4.5,Steel,Palmer,2025-10-08
-Space Bird,181,Bushing,5,Steel,Honey,
-Double G,180,Island w/Block,4.25,Steel,Macropockets,
-B.I.A.,179,Island,4.25,Aluminum,Palmer,
-Bonkers,178,Island,5.4,Steel,,
-Super Goose,175,Island w/Block,4.5,Steel,Honey,
-Wasted Rainbow,174,Island,4.5,Steel,Micropockets - Standard,2025-04-25
-Team,173,Island - IMM,5,Steel,,
-About Blackwing,172,,,,,
-Atacms,171,,,,,
-BABY COMP,170,,,,,
-Bees on Parade,164,,,,,
-Blood Shot,163,,,,,
-Baby Bones,162,,,,,
-Bread N Butter,161,,,,,
-88+P,160,,,,,
-About F40,159,,,,,
-About Wasted Rainbow,158,,,,,
-War Power,157,,,,,
-Ghost,155,,,,,
-Bird Flu,153,,,,,
-Tina Turner,152,,,,,
-2BBL,151,,,,,
-Skeeyee,150,,,,,
-Speed Bird,149,,,,,
-Iconic,148,,,,,
-Baby Bird,147,,,,,
-Skellington,146,,,,,
-Infiniverse,145,,,,,
-Red Ryder,144,,,,,
-Perfect AF,143,,,,,
-Lioness,142,,,,,
-Wingman,141,,,,,
-VENOM 2,140,,,,,
-Viscount,139,,,,,
-Dirtybird,138,,,,,
-New Pistol - Wide Body,137,,,,,
-Double D,135,,,,,
-Drip,134,,,,,
-720,133,,,,,
-CB 88,132,,,,,
-Synical,131,,,,,
-TTG,130,,,,,
-Encore,129,,,,,
-Fast 2088,128,,,,,
-Super C,127,,,,,
-Venom,124,,,,,
-Thunderbird,123,,,,,
-Calvin's Cherry,122,,,,,
-Double P,121,,,,,
-P1,120,,,,,
-Sexy Red,119,,,,,
-King Camo,117,,,,,
-V88,116,,,,,
-Corazòn,115,,,,,
-BDS69,114,,,,,
-RP5,109,,,,,
-Honey Wars,106,,,,,
-G2 Corsa,105,,,,,
-The Gift,104,,,,,
-Baby Monster,103,,,,,
-Bone Crusher,102,,,,,
-IMM My Way,96,,,,,
-Gratitude 94,95,,,,,
-Formula 44,94,,,,,
-Performance Retro,93,,,,,
-Zootiez,92,,,,,
-Terminator IMM Open,91,,,,,
-Elevated Air,89,,,,,
-Gallenson's Bonehead,88,,,,,
-Xcelerator Xpress,87,,,,,
-Formula K,86,,,,,
+design_name,index,barrel_style,barrel_length,frame_grip_material,grip_style,release_date,drop_cycle
+Rude Boy,192,Island - IMM,5,Steel,Macropockets,2025-10-17,14
+Marlboro Red,190,Island,5,Steel,172 Skater Terrain,2025-10-15,14
+Lemon,189,Bull,3.75,Steel,Space Invaders,2025-10-13,14
+Rare Air,191,Island,4.5,Titanium,Space Invaders,2025-10-10,14
+Goodums,188,Island,4.5,Steel,Palmer,2025-10-08,14
+Space Bird,181,Bushing,5,Steel,Honey,2025-08-13,13
+Double G,180,Island w/Block,4.25,Steel,Macropockets,2025-08-15,13
+B.I.A.,179,Island,4.25,Aluminum,Palmer,2025-08-20,13
+Bonkers,178,Island,5.4,Steel,720 Hex,2025-08-18,13
+Super Goose,175,Island w/Block,4.5,Steel,Honey,2025-06-20,12
+Wasted Rainbow,174,Island,4.5,Steel,Micropockets - Standard,2025-04-25,11
+Team,173,Island - IMM,5,Steel,172 Skater Terrain,2025-06-25,12
+Atacms,171,Island,4.5,Steel,Palmer,2025-05-02,11
+Bees on Parade,164,Island - IMM,5,Steel,720 Hex,2025-06-23,12
+Blood Shot,163,Island - IMM,5,Steel,Space Invaders,2025-08-22,13
+Baby Bones,162,Island - Baby Comp,5,Titanium,172 Skater Terrain,2025-06-16,12
+Bread N Butter,161,Bushing,5,Steel,Macropockets,2025-06-18,12
+88+P,160,Island - IMM,5,Steel,157 Diamonds,2025-05-05,11
+War Power,157,Island,3.75,Steel,Micropockets - Standard,2025-04-30,11
+Ghost,155,Island,5,Steel,Palmer,2025-04-28,11
+Bird Flu,153,Island - IMM,5,Steel,Macropockets,2025-03-10,10
+Tina Turner,152,Island,4.3,Aluminum,Palmer,2025-03-07,10
+2BBL,151,Island w/Block,5,Steel,187 Diamonds,2025-03-05,10
+Skeeyee,150,Island,5,Steel,Micropockets - Standard,2025-03-03,10
+Speed Bird,149,Bushing,5,Steel,Macropockets,2025-02-28,10
+Iconic,148,Island - Baby Comp,5,Aluminum,Palmer,2025-01-10,9
+Baby Bird,147,Island,4.25,Steel,Micropockets - Standard,2025-01-06,9
+Skellington,146,Island,4.5,Steel,Honey,2025-01-03,9
+Infiniverse,145,Island - IMM,5,Steel,172 Skater Terrain,2025-01-13,9
+Red Ryder,144,Island,4.25,Steel,Micropockets - Standard,2025-01-08,9
+Perfect AF,143,Bushing,5,Steel,Macropockets,2024-11-06,8
+Lioness,142,Island - IMM,5,Steel,172 Skater Terrain,2024-11-15,8
+Wingman,141,Island,5.4,Steel,172 Skater Terrain,2024-11-08,8
+VENOM 2,140,Bushing,5,Steel,720 Hex,2024-11-11,8
+Viscount,139,Island,5,Steel,Honey,2024-11-13,8
+Dirtybird,138,Island,4.5,Steel,Micropockets - Standard,2024-11-04,8
+Double D,135,Island,5,Steel,250 Diamonds,2024-10-04,7
+Drip,134,Island - IMM,5,Steel,Honey,2024-10-07,7
+720,133,Island,3.75,Steel,Honey,2024-09-27,7
+CB 88,132,Island w/Block,,Steel,Palmer,2024-10-02,7
+Synical,131,Island,5,Steel,Palmer,2024-09-30,7
+TTG,130,Island - IMM,5,Steel,Macropockets,2024-08-21,6
+Encore,129,Island,5,Steel,250 Diamonds,2024-08-19,6
+Fast 2088,128,Island,5,Steel,187 Diamonds,2024-08-16,6
+Super C,127,Island,3.75,Steel,Micropockets - Standard,2024-08-14,6
+Venom,124,Island,5,Steel,172 Skater Terrain,2024-08-12,6
+Thunderbird,123,Island,5,Steel,187 Diamonds,2024-06-28,5
+Calvin's Cherry,122,Island w/Block,5,Titanium,720 Hex,2024-07-01,5
+Double P,121,Island,5,Steel,Macropockets,2024-06-24,5
+P1,120,Island - IMM,5,Steel,250 Diamonds,2024-07-03,5
+Sexy Red,119,Island,3.75,Steel,Micropockets - Standard,2024-06-26,5
+King Camo,117,Island,4.5,Steel,187 Diamonds,2024-05-06,4
+V88,116,Island,4.5,Steel,Honey,2024-05-01,4
+Corazòn,115,Island - IMM,5,Steel,172 Skater Terrain,2024-05-08,4
+BDS69,114,Island,4.5,Steel,Palmer,2024-05-03,4
+RP5,109,Bushing,5,Steel,172 Skater Terrain,2024-04-29,4
+Honey Wars,106,Island - IMM,5,Steel,Honey,2024-03-13,3
+G2 Corsa,105,Island,5.4,Steel,Macropockets,2024-03-11,3
+The Gift,104,Island,5,Steel,Palmer,2024-03-08,3
+Baby Monster,103,Island,4.5,Steel,Palmer,2024-03-06,3
+Bone Crusher,102,Island w/Block,4.5,Steel,Palmer,2024-03-04,3
+IMM My Way,96,Island - IMM,5,Steel,Micropockets - Aggressive,2024-02-05,2
+Gratitude 94,95,Island,5,Steel,Honey,2024-02-02,2
+Formula 44,94,Island,5,Steel,172 Skater Terrain,2024-01-31,2
+Performance Retro,93,Bull,5,Steel,1911 Grip Panels,2024-01-29,2
+Zootiez,92,Island,5.4,Steel,Honey,2024-01-26,2
+Terminator IMM Open,91,Island - IMM,5,Steel,172 Skater Terrain,2023-12-13,1
+Elevated Air,89,Island,4.5,Steel,187 Diamonds,2023-12-11,1
+Gallenson's Bonehead,88,Island,4.5,Steel,Goosebumps,2023-12-08,1
+Xcelerator Xpress,87,Island,3.75,Steel,Micropockets - Standard,2023-12-06,1
+Formula K,86,Bushing,5,Steel,Macropockets,2023-12-04,1

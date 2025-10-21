@@ -9,7 +9,8 @@ const SearchPage = () => {
     barrel_style: '',
     barrel_length: '',
     frame_grip_material: '',
-    grip_style: ''
+    grip_style: '',
+    drop_cycle: ''
   });
   const navigate = useNavigate();
 
@@ -18,10 +19,24 @@ const SearchPage = () => {
   const barrelLengths = useMemo(() => getUniqueValues('barrel_length'), []);
   const frameGripMaterials = useMemo(() => getUniqueValues('frame_grip_material'), []);
   const gripStyles = useMemo(() => getUniqueValues('grip_style'), []);
+  const dropCycles = useMemo(() => {
+    const cycles = getUniqueValues('drop_cycle');
+    return cycles.sort((a, b) => parseInt(b) - parseInt(a));
+  }, []);
 
   // Search results
   const searchResults = useMemo(() => {
-    return searchDesigns(searchQuery, filters);
+    const results = searchDesigns(searchQuery, filters);
+    // Sort by release date descending (newest first)
+    return results.sort((a, b) => {
+      // Handle empty release dates by putting them at the end
+      if (!a.release_date && !b.release_date) return 0;
+      if (!a.release_date) return 1;
+      if (!b.release_date) return -1;
+
+      // Compare dates (newest first)
+      return new Date(b.release_date) - new Date(a.release_date);
+    });
   }, [searchQuery, filters]);
 
   const handleFilterChange = (field, value) => {
@@ -37,7 +52,8 @@ const SearchPage = () => {
       barrel_style: '',
       barrel_length: '',
       frame_grip_material: '',
-      grip_style: ''
+      grip_style: '',
+      drop_cycle: ''
     });
   };
 
@@ -48,20 +64,21 @@ const SearchPage = () => {
   return (
     <div className="search-page">
       <div className="search-container">
-        <div className="search-header">
-          <h2>Search SVI Designs</h2>
-          <p>Find the perfect design by searching or filtering characteristics</p>
-        </div>
+
 
         {/* Search Bar */}
         <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search designs by name or characteristics..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
+          <div className="search-group">
+            <label htmlFor="search-input">Search anything:</label>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search designs by name or characteristics..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="search-input"
+            />
+          </div>
         </div>
 
         {/* Filters */}
@@ -122,6 +139,20 @@ const SearchPage = () => {
             </select>
           </div>
 
+          <div className="filter-group">
+            <label htmlFor="drop-cycle">Drop Cycle:</label>
+            <select
+              id="drop-cycle"
+              value={filters.drop_cycle}
+              onChange={(e) => handleFilterChange('drop_cycle', e.target.value)}
+            >
+              <option value="">All Cycles</option>
+              {dropCycles.map(cycle => (
+                <option key={cycle} value={cycle}>Cycle {cycle}</option>
+              ))}
+            </select>
+          </div>
+
           <button onClick={clearFilters} className="clear-filters-btn">
             Clear All Filters
           </button>
@@ -141,35 +172,43 @@ const SearchPage = () => {
             </div>
           ) : (
             <div className="results-grid">
-              {searchResults.map((design) => (
-                <div
-                  key={design.index}
-                  className="design-card"
-                  onClick={() => handleDesignClick(design.index)}
-                >
-                  <div className="design-thumbnail">
-                    <img
-                      src={`/assets/${design.index}/thumbnail.png`}
-                      alt={`${design.design_name} thumbnail`}
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
-                      }}
-                    />
-                    <div className="thumbnail-placeholder" style={{ display: 'none' }}>
-                      <span>No Image</span>
+              {searchResults.map((design) => {
+                const cycleNumber = parseInt(design.drop_cycle);
+                const cycleClass = cycleNumber % 2 === 0 ? 'even-cycle' : 'odd-cycle';
+
+                return (
+                  <div
+                    key={design.index}
+                    className={`design-card ${cycleClass}`}
+                    onClick={() => handleDesignClick(design.index)}
+                  >
+                    <div className="design-thumbnail">
+                      <img
+                        src={`/assets/${design.index}/thumbnail.png`}
+                        alt={`${design.design_name} thumbnail`}
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="thumbnail-placeholder" style={{ display: 'none' }}>
+                        <span>No Image</span>
+                      </div>
+                    </div>
+                    <div className="design-info">
+                      <h3>{design.design_name}</h3>
+                      <div className="design-specs">
+                        {design.barrel_style && <span>{design.barrel_style}</span>}
+                        {design.barrel_length && <span>{design.barrel_length}"</span>}
+                        {design.frame_grip_material && <span>{design.frame_grip_material}</span>}
+                        {design.grip_style && <span>{design.grip_style}</span>}
+                        {design.release_date && <span>{design.release_date}</span>}
+                        {design.drop_cycle && <span>Cycle {design.drop_cycle}</span>}
+                      </div>
                     </div>
                   </div>
-                  <div className="design-info">
-                    <h3>{design.design_name}</h3>
-                    <div className="design-specs">
-                      {design.barrel_style && <span>Barrel: {design.barrel_style}</span>}
-                      {design.barrel_length && <span>Length: {design.barrel_length}"</span>}
-                      {design.frame_grip_material && <span>Material: {design.frame_grip_material}</span>}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

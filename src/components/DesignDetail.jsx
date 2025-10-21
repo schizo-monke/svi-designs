@@ -53,7 +53,8 @@ const DesignDetail = () => {
     { label: 'Barrel Length', value: design.barrel_length ? `${design.barrel_length}"` : 'Not specified' },
     { label: 'Frame/Grip Material', value: design.frame_grip_material || 'Not specified' },
     { label: 'Grip Style', value: design.grip_style || 'Not specified' },
-    { label: 'Release Date', value: design.release_date || 'Not specified' }
+    { label: 'Release Date', value: design.release_date || 'Not specified' },
+    { label: 'Drop Cycle', value: design.drop_cycle ? `Cycle ${design.drop_cycle}` : 'Not specified' }
   ];
 
   return (
