@@ -394,7 +394,7 @@ export const designs = [
     design_name: "CB 88",
     index: 132,
     barrel_style: "Island w/Block",
-    barrel_length: "",
+    barrel_length: "4.5",
     frame_grip_material: "Steel",
     grip_style: "Palmer",
     release_date: "2024-10-02",
