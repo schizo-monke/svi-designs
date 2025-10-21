@@ -51,7 +51,10 @@
   margin: 0 auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .search-group {
@@ -71,7 +74,6 @@
 .disclaimer-tooltip {
   position: relative;
   display: inline-block;
-  margin-left: 1rem;
 }
 
 .tooltip-icon {
@@ -149,20 +151,22 @@
 
 .filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
   border-bottom: 1px solid #eee;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  justify-items: center;
+  justify-items: stretch;
 }
 
 .filter-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .filter-group label {
@@ -179,6 +183,9 @@
   background: white;
   color: #000;
   transition: all 0.3s ease;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .filter-group select:focus {
@@ -199,6 +206,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  justify-self: center;
+  max-width: 200px;
 }
 
 .clear-filters-btn:hover {
@@ -295,6 +304,29 @@
 
   .search-container {
     max-width: 2400px;
+  }
+}
+
+/* Responsive filter grid */
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .filters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 

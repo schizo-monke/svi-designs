@@ -69,7 +69,6 @@ const SearchPage = () => {
         {/* Search Bar */}
         <div className="search-bar">
           <div className="search-group">
-            <label htmlFor="search-input">Search anything:</label>
             <input
               id="search-input"
               type="text"
