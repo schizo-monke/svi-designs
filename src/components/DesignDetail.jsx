@@ -54,7 +54,8 @@ const DesignDetail = () => {
     { label: 'Frame/Grip Material', value: design.frame_grip_material || 'Not specified' },
     { label: 'Grip Style', value: design.grip_style || 'Not specified' },
     { label: 'Release Date', value: design.release_date || 'Not specified' },
-    { label: 'Drop Cycle', value: design.drop_cycle ? `Cycle ${design.drop_cycle}` : 'Not specified' }
+    { label: 'Drop Cycle', value: design.drop_cycle ? `Cycle ${design.drop_cycle}` : 'Not specified' },
+    { label: 'Serrations', value: design.serrations || 'Not specified' }
   ];
 
   return (

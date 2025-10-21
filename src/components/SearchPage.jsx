@@ -10,7 +10,8 @@ const SearchPage = () => {
     barrel_length: '',
     frame_grip_material: '',
     grip_style: '',
-    drop_cycle: ''
+    drop_cycle: '',
+    serrations: ''
   });
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const SearchPage = () => {
     const cycles = getUniqueValues('drop_cycle');
     return cycles.sort((a, b) => parseInt(b) - parseInt(a));
   }, []);
+  const serrations = useMemo(() => getUniqueValues('serrations'), []);
 
   // Search results
   const searchResults = useMemo(() => {
@@ -156,6 +158,19 @@ const SearchPage = () => {
               ))}
             </select>
           </div>
+          <div className="filter-group">
+            <label htmlFor="serrations">Serrations:</label>
+            <select
+              id="serrations"
+              value={filters.serrations}
+              onChange={(e) => handleFilterChange('serrations', e.target.value)}
+            >
+              <option value="">All Serrations</option>
+              {serrations.map(serration => (
+                <option key={serration} value={serration}>{serration}</option>
+              ))}
+            </select>
+          </div>
 
           <button onClick={clearFilters} className="clear-filters-btn">
             Clear All Filters
@@ -208,6 +223,7 @@ const SearchPage = () => {
                         {design.grip_style && <span>{design.grip_style}</span>}
                         {design.release_date && <span>{design.release_date}</span>}
                         {design.drop_cycle && <span>Cycle {design.drop_cycle}</span>}
+                        {design.serrations && <span>{design.serrations}</span>}
                       </div>
                     </div>
                   </div>
