@@ -295,7 +295,7 @@ export const designs = [
   {
     design_name: "Bees on Parade",
     index: 164,
-    barrel_length: "4.5",
+    barrel_length: "5",
     release_date: "2025-06-23",
     drop_cycle: "12",
     date: "6/23/2025",
@@ -359,7 +359,7 @@ export const designs = [
     slide_engraving: "Skulls",
     rollmark_font: "None",
     dust_cover_cut: "Short Butler",
-    compensator: "None"
+    compensator: "Baby"
   },
   {
     design_name: "Bread N Butter",
@@ -589,7 +589,7 @@ export const designs = [
     slide_engraving: "None",
     rollmark_font: "None",
     dust_cover_cut: "Meat Tenderizer",
-    compensator: "None"
+    compensator: "Baby"
   },
   {
     design_name: "Baby Bird",
