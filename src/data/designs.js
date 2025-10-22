@@ -770,8 +770,8 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "No",
-    slide_engraving: "Infinity Font",
-    rollmark_font: "None",
+    slide_engraving: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Long Butler",
     compensator: "None"
   },
@@ -1115,8 +1115,8 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "Yes",
-    slide_engraving: "Infinity Font",
-    rollmark_font: "None",
+    slide_engraving: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
