@@ -354,7 +354,7 @@ export const designs = [
     full_slide_serrations: "No",
     cheekbuster: "No",
     irons_dot: "Dot",
-    tumbled_grip: "No",
+    tumbled_grip: "Yes",
     blast_pattern: "No",
     slide_engraving: "Skulls",
     rollmark_font: "None",
@@ -1575,7 +1575,7 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "No",
-    slide_engraving: "None",
+    slide_engraving: "Skulls",
     rollmark_font: "Infinity Font",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
@@ -1598,7 +1598,7 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "No",
-    slide_engraving: "Skulls",
+    slide_engraving: "None",
     rollmark_font: "None",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
