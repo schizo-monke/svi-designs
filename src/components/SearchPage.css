@@ -256,6 +256,7 @@
   align-items: center;
   overflow-x: hidden;
   width: 100%;
+  flex-direction: column;
 }
 
 .no-results {
@@ -279,6 +280,7 @@
   width: calc(100% - 4rem);
   box-sizing: border-box;
   justify-items: center;
+  justify-content: center;
 }
 
 /* Responsive grid for different screen sizes */
@@ -542,6 +544,33 @@
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Specific fix for 390x844 resolution (iPhone 12 Pro) */
+@media (max-width: 430px) {
+  .search-results {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    max-width: 100%;
+  }
+
+  .design-card {
+    max-width: 100%;
+    min-width: 280px;
+    width: 100%;
   }
 }
 
