@@ -128,7 +128,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Long Butler",
     compensator: "None"
   },
@@ -150,7 +150,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
@@ -242,7 +242,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
@@ -449,7 +449,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "Ghost/Mobius",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Short Butler",
     compensator: "None"
   },
@@ -587,7 +587,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Meat Tenderizer",
     compensator: "Baby"
   },
@@ -656,7 +656,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "Mobius",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Short Butler",
     compensator: "IMM"
   },
@@ -748,7 +748,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
@@ -770,7 +770,7 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "No",
-    slide_engraving: "None",
+    slide_engraving: "Infinity Font",
     rollmark_font: "None",
     dust_cover_cut: "Long Butler",
     compensator: "None"
@@ -932,7 +932,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "Yes",
     slide_engraving: "None",
-    rollmark_font: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Short Butler",
     compensator: "None"
   },
@@ -1115,7 +1115,7 @@ export const designs = [
     irons_dot: "Dot",
     tumbled_grip: "No",
     blast_pattern: "Yes",
-    slide_engraving: "None",
+    slide_engraving: "Infinity Font",
     rollmark_font: "None",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
@@ -1162,7 +1162,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
@@ -1576,7 +1576,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "Skulls",
-    rollmark_font: "Infinity Font",
+    rollmark_font: "None",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
@@ -1599,7 +1599,7 @@ export const designs = [
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
-    rollmark_font: "None",
+    rollmark_font: "Infinity Font",
     dust_cover_cut: "Infinity Extended Dust Cover",
     compensator: "None"
   },
