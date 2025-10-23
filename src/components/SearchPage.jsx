@@ -178,6 +178,9 @@ const SearchPage = () => {
       <div className="search-container">
         {/* Search Bar */}
         <div className="search-bar">
+          <div className="disclaimer-text">
+            This site is not in any way affiliated with SVI or Infinity Firearms. It is purely for informational purposes only to help enthusiasts appreciate the variety that SVI has to offer with the Infinity designs.
+          </div>
           <div className="search-group">
             <input
               id="search-input"
@@ -187,12 +190,6 @@ const SearchPage = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
             />
-          </div>
-          <div className="disclaimer-tooltip">
-            <span className="tooltip-icon">?</span>
-            <div className="tooltip-text">
-              This site is not in any way affiliated with SVI or Infinity Firearms. It is purely for informational purposes only to help enthusiasts appreciate the variety that SVI has to offer with the Infinity designs.
-            </div>
           </div>
         </div>
 
