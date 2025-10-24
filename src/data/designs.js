@@ -1567,7 +1567,7 @@ export const designs = [
     slide_serrations: "172 Serrations",
     full_slide_serrations: "No",
     cheekbuster: "No",
-    irons_dot: "Dot",
+    irons_dot: "Irons",
     tumbled_grip: "No",
     blast_pattern: "No",
     slide_engraving: "None",
