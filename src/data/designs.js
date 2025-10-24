@@ -1,6 +1,116 @@
 // CSV data parsed into JavaScript objects with enhanced attributes
 export const designs = [
   {
+    design_name: "Blackwing",
+    index: 172,
+    barrel_length: "",
+    release_date: "2025-12-17",
+    drop_cycle: "15",
+    frame_material: "",
+    barrel_type: "",
+    grip_texture: "",
+    trigger_guard: "",
+    grip_length: "",
+    slide_serrations: "",
+    full_slide_serrations: "",
+    cheekbuster: "",
+    irons_dot: "",
+    tumbled_grip: "",
+    blast_pattern: "",
+    slide_engraving: "",
+    rollmark_font: "",
+    dust_cover_cut: "",
+    compensator: ""
+  },
+  {
+    design_name: "F40",
+    index: 159,
+    barrel_length: "",
+    release_date: "2025-12-12",
+    drop_cycle: "15",
+    frame_material: "",
+    barrel_type: "",
+    grip_texture: "",
+    trigger_guard: "",
+    grip_length: "",
+    slide_serrations: "",
+    full_slide_serrations: "",
+    cheekbuster: "",
+    irons_dot: "",
+    tumbled_grip: "",
+    blast_pattern: "",
+    slide_engraving: "",
+    rollmark_font: "",
+    dust_cover_cut: "",
+    compensator: ""
+  },
+  {
+    design_name: "California Dreamin'",
+    index: 195,
+    barrel_length: "",
+    release_date: "2025-12-15",
+    drop_cycle: "15",
+    frame_material: "",
+    barrel_type: "",
+    grip_texture: "",
+    trigger_guard: "",
+    grip_length: "",
+    slide_serrations: "",
+    full_slide_serrations: "",
+    cheekbuster: "",
+    irons_dot: "",
+    tumbled_grip: "",
+    blast_pattern: "",
+    slide_engraving: "",
+    rollmark_font: "",
+    dust_cover_cut: "",
+    compensator: ""
+  },
+  {
+    design_name: "Buzzin",
+    index: 194,
+    barrel_length: "",
+    release_date: "2025-12-19",
+    drop_cycle: "15",
+    frame_material: "",
+    barrel_type: "",
+    grip_texture: "",
+    trigger_guard: "",
+    grip_length: "",
+    slide_serrations: "",
+    full_slide_serrations: "",
+    cheekbuster: "",
+    irons_dot: "",
+    tumbled_grip: "",
+    blast_pattern: "",
+    slide_engraving: "",
+    rollmark_font: "",
+    dust_cover_cut: "",
+    compensator: ""
+  },
+  {
+    design_name: "Odd Bob",
+    index: 193,
+    barrel_length: "",
+    release_date: "2025-12-10",
+    drop_cycle: "15",
+    frame_material: "",
+    barrel_type: "",
+    grip_texture: "",
+    trigger_guard: "",
+    grip_length: "",
+    slide_serrations: "",
+    full_slide_serrations: "",
+    cheekbuster: "",
+    irons_dot: "",
+    tumbled_grip: "",
+    blast_pattern: "",
+    slide_engraving: "",
+    rollmark_font: "",
+    dust_cover_cut: "",
+    compensator: ""
+  },
+  {
     design_name: "Rude Boy",
     index: 192,
     barrel_length: "4.5",
@@ -1655,23 +1765,23 @@ export const searchDesigns = (query, filters = {}) => {
       (design.compensator && design.compensator.toLowerCase().includes(searchText));
 
     // Filter by specific characteristics
-    const matchesBarrelLength = !filters.barrel_length || design.barrel_length === filters.barrel_length;
-    const matchesDropCycle = !filters.drop_cycle || design.drop_cycle === filters.drop_cycle;
-    const matchesFrameMaterial = !filters.frame_material || design.frame_material === filters.frame_material;
-    const matchesBarrelType = !filters.barrel_type || design.barrel_type === filters.barrel_type;
-    const matchesGripTexture = !filters.grip_texture || design.grip_texture === filters.grip_texture;
-    const matchesTriggerGuard = !filters.trigger_guard || design.trigger_guard === filters.trigger_guard;
-    const matchesGripLength = !filters.grip_length || design.grip_length === filters.grip_length;
-    const matchesSlideSerrations = !filters.slide_serrations || design.slide_serrations === filters.slide_serrations;
-    const matchesFullSlideSerrations = !filters.full_slide_serrations || design.full_slide_serrations === filters.full_slide_serrations;
-    const matchesCheekbuster = !filters.cheekbuster || design.cheekbuster === filters.cheekbuster;
-    const matchesIronsDot = !filters.irons_dot || design.irons_dot === filters.irons_dot;
-    const matchesTumbledGrip = !filters.tumbled_grip || design.tumbled_grip === filters.tumbled_grip;
-    const matchesBlastPattern = !filters.blast_pattern || design.blast_pattern === filters.blast_pattern;
-    const matchesSlideEngraving = !filters.slide_engraving || design.slide_engraving === filters.slide_engraving;
-    const matchesRollmarkFont = !filters.rollmark_font || design.rollmark_font === filters.rollmark_font;
-    const matchesDustCoverCut = !filters.dust_cover_cut || design.dust_cover_cut === filters.dust_cover_cut;
-    const matchesCompensator = !filters.compensator || design.compensator === filters.compensator;
+    const matchesBarrelLength = filters.barrel_length === '' || design.barrel_length === filters.barrel_length;
+    const matchesDropCycle = filters.drop_cycle === '' || design.drop_cycle === filters.drop_cycle;
+    const matchesFrameMaterial = filters.frame_material === '' || design.frame_material === filters.frame_material;
+    const matchesBarrelType = filters.barrel_type === '' || design.barrel_type === filters.barrel_type;
+    const matchesGripTexture = filters.grip_texture === '' || design.grip_texture === filters.grip_texture;
+    const matchesTriggerGuard = filters.trigger_guard === '' || design.trigger_guard === filters.trigger_guard;
+    const matchesGripLength = filters.grip_length === '' || design.grip_length === filters.grip_length;
+    const matchesSlideSerrations = filters.slide_serrations === '' || design.slide_serrations === filters.slide_serrations;
+    const matchesFullSlideSerrations = filters.full_slide_serrations === '' || design.full_slide_serrations === filters.full_slide_serrations;
+    const matchesCheekbuster = filters.cheekbuster === '' || design.cheekbuster === filters.cheekbuster;
+    const matchesIronsDot = filters.irons_dot === '' || design.irons_dot === filters.irons_dot;
+    const matchesTumbledGrip = filters.tumbled_grip === '' || design.tumbled_grip === filters.tumbled_grip;
+    const matchesBlastPattern = filters.blast_pattern === '' || design.blast_pattern === filters.blast_pattern;
+    const matchesSlideEngraving = filters.slide_engraving === '' || design.slide_engraving === filters.slide_engraving;
+    const matchesRollmarkFont = filters.rollmark_font === '' || design.rollmark_font === filters.rollmark_font;
+    const matchesDustCoverCut = filters.dust_cover_cut === '' || design.dust_cover_cut === filters.dust_cover_cut;
+    const matchesCompensator = filters.compensator === '' || design.compensator === filters.compensator;
 
     return matchesText && matchesBarrelLength && matchesDropCycle && matchesFrameMaterial && matchesBarrelType && matchesGripTexture && matchesTriggerGuard && matchesGripLength && matchesSlideSerrations && matchesFullSlideSerrations && matchesCheekbuster && matchesIronsDot && matchesTumbledGrip && matchesBlastPattern && matchesSlideEngraving && matchesRollmarkFont && matchesDustCoverCut && matchesCompensator;
   });
