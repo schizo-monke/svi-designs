@@ -685,7 +685,7 @@ export const designs = [
     release_date: "2025-01-10",
     drop_cycle: "9",
     date: "1/10/25",
-    frame_material: "Steel",
+    frame_material: "Aluminum",
     barrel_type: "Hybrid",
     grip_texture: "Palmer",
     trigger_guard: "Infinity Extended",
