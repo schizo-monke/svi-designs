@@ -151,6 +151,19 @@
   color: #2c3e50;
 }
 
+.design-card-detail .spec-label.transparent {
+  opacity: 0;
+}
+
+.design-card-detail .spec-value.transparent {
+  opacity: 0;
+}
+
+.design-card-detail .spec-item.transparent {
+  background: transparent;
+  border-left: 2px solid transparent;
+}
+
 /* Responsive grid layout */
 @media (min-width: 768px) {
   .design-specs-grid {

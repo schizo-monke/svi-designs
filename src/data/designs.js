@@ -270,7 +270,6 @@ export const designs = [
     barrel_length: "4.25",
     release_date: "2025-08-20",
     drop_cycle: "13",
-    date: "8/20/2025",
     frame_material: "Aluminum",
     barrel_type: "Hybrid",
     grip_texture: "Palmer",
