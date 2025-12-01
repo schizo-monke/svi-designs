@@ -7,8 +7,58 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+          <div className="snowflake">❄</div>
+          <div className="snowflake">❅</div>
+          <div className="snowflake">❆</div>
+        </div>
         <header className="app-header">
-          <h1>SVI Infinity - Drop Designs</h1>
+          <h1>🎄 SVI Infinity - Drop Designs 🎄</h1>
         </header>
         <main>
           <Routes>

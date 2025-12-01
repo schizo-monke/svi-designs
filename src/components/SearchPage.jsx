@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { getUniqueValues, searchDesigns } from '../data/designs';
 import './SearchPage.css';
 
@@ -85,27 +85,86 @@ const shouldMakeTransparent = (value) => {
 };
 
 const SearchPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filters, setFilters] = useState({
-    barrel_length: '',
-    drop_cycle: '',
-    frame_material: '',
-    barrel_type: '',
-    grip_texture: '',
-    trigger_guard: '',
-    grip_length: '',
-    slide_serrations: '',
-    full_slide_serrations: '',
-    cheekbuster: '',
-    irons_dot: '',
-    tumbled_grip: '',
-    blast_pattern: '',
-    slide_engraving: '',
-    rollmark_font: '',
-    dust_cover_cut: '',
-    compensator: ''
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+
+  // Helper to get filters from URL
+  const getFiltersFromUrl = (params) => {
+    return {
+      barrel_length: params.get('barrel_length') || '',
+      drop_cycle: params.get('drop_cycle') || '',
+      frame_material: params.get('frame_material') || '',
+      barrel_type: params.get('barrel_type') || '',
+      grip_texture: params.get('grip_texture') || '',
+      trigger_guard: params.get('trigger_guard') || '',
+      grip_length: params.get('grip_length') || '',
+      slide_serrations: params.get('slide_serrations') || '',
+      full_slide_serrations: params.get('full_slide_serrations') || '',
+      cheekbuster: params.get('cheekbuster') || '',
+      irons_dot: params.get('irons_dot') || '',
+      tumbled_grip: params.get('tumbled_grip') || '',
+      blast_pattern: params.get('blast_pattern') || '',
+      slide_engraving: params.get('slide_engraving') || '',
+      rollmark_font: params.get('rollmark_font') || '',
+      dust_cover_cut: params.get('dust_cover_cut') || '',
+      compensator: params.get('compensator') || ''
+    };
+  };
+
+  // Helper to build URL params from state
+  const buildParamsFromState = (query, filterState) => {
+    const params = new URLSearchParams();
+    if (query) params.set('q', query);
+    Object.entries(filterState).forEach(([key, value]) => {
+      if (value) params.set(key, value);
+    });
+    return params;
+  };
+
+  // Initialize state from URL parameters
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get('q') || '');
+  const [filters, setFilters] = useState(() => getFiltersFromUrl(searchParams));
+
+  // Track previous URL to detect external changes (back/forward buttons)
+  const prevUrlRef = useRef(searchParams.toString());
+
+  // Update URL when search query or filters change (from user action)
+  useEffect(() => {
+    const expectedParams = buildParamsFromState(searchQuery, filters);
+    const currentParamsStr = searchParams.toString();
+    const expectedParamsStr = expectedParams.toString();
+
+    // Only update URL if it doesn't match current state
+    if (currentParamsStr !== expectedParamsStr) {
+      setSearchParams(expectedParams, { replace: true });
+      // Update ref to track that we're updating the URL
+      prevUrlRef.current = expectedParamsStr;
+    }
+  }, [searchQuery, filters, searchParams, setSearchParams]);
+
+  // Update state when URL parameters change externally (e.g., browser back/forward)
+
+  useEffect(() => {
+    const currentUrl = searchParams.toString();
+    const prevUrl = prevUrlRef.current;
+
+    // Only update state if URL changed externally (not from our own update)
+    if (currentUrl !== prevUrl) {
+      const urlQuery = searchParams.get('q') || '';
+      const urlFilters = getFiltersFromUrl(searchParams);
+
+      // Update state only if values are different
+      setSearchQuery(prev => prev !== urlQuery ? urlQuery : prev);
+      setFilters(prev => {
+        const changed = Object.keys(urlFilters).some(
+          key => urlFilters[key] !== prev[key]
+        );
+        return changed ? urlFilters : prev;
+      });
+
+      prevUrlRef.current = currentUrl;
+    }
+  }, [searchParams]);
 
   // Get unique values for filter dropdowns
   const barrelLengths = useMemo(() => getUniqueValues('barrel_length'), []);
@@ -143,6 +202,35 @@ const SearchPage = () => {
       return new Date(b.release_date) - new Date(a.release_date);
     });
   }, [searchQuery, filters]);
+
+  // Calculate mean days between designs
+  const meanDaysBetween = useMemo(() => {
+    // Only calculate if there are more than 1 design
+    if (searchResults.length <= 1) return null;
+
+    // Filter designs with valid release dates and sort chronologically (oldest first)
+    const designsWithDates = searchResults
+      .filter(design => design.release_date && design.release_date.trim() !== '')
+      .map(design => ({
+        ...design,
+        date: new Date(design.release_date)
+      }))
+      .sort((a, b) => a.date - b.date); // Sort oldest to newest
+
+    // Need at least 2 designs with dates to calculate
+    if (designsWithDates.length < 2) return null;
+
+    // Calculate days between consecutive designs
+    const daysBetween = [];
+    for (let i = 1; i < designsWithDates.length; i++) {
+      const daysDiff = (designsWithDates[i].date - designsWithDates[i - 1].date) / (1000 * 60 * 60 * 24);
+      daysBetween.push(daysDiff);
+    }
+
+    // Calculate mean
+    const mean = daysBetween.reduce((sum, days) => sum + days, 0) / daysBetween.length;
+    return Math.round(mean * 10) / 10; // Round to 1 decimal place
+  }, [searchResults]);
 
   const handleFilterChange = (field, value) => {
     setFilters(prev => ({
@@ -466,6 +554,11 @@ const SearchPage = () => {
         {/* Results Count */}
         <div className="results-count">
           <p>Found {searchResults.length} design{searchResults.length !== 1 ? 's' : ''}</p>
+          {meanDaysBetween !== null && (
+            <p className="mean-days-metric">
+              Mean days between designs: <strong>{meanDaysBetween}</strong> days
+            </p>
+          )}
         </div>
 
         {/* Search Results */}
