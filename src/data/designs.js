@@ -29,7 +29,7 @@ export const designs = [
     release_date: "2025-12-12",
     drop_cycle: "15",
     frame_material: "Steel",
-    barrel_type: "5",
+    barrel_type: "Hybrid",
     grip_texture: "172 Skater",
     trigger_guard: "Infinity Extended",
     grip_length: "Full Size",
