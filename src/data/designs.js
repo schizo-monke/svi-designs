@@ -74,7 +74,7 @@ export const designs = [
     drop_cycle: "15",
     frame_material: "Steel",
     barrel_type: "Hybrid",
-    grip_texture: "",
+    grip_texture: "Honey Skater",
     trigger_guard: "Infinity Traditional Square",
     grip_length: "Full Size",
     slide_serrations: "720 Sliced",
