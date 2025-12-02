@@ -52,7 +52,7 @@ export const designs = [
     drop_cycle: "15",
     frame_material: "Steel",
     barrel_type: "Hybrid",
-    grip_texture: "Macropocket",
+    grip_texture: "Micropocket Standard",
     trigger_guard: "Infinity Traditional Square",
     grip_length: "Full Size",
     slide_serrations: "Xcellerator",
