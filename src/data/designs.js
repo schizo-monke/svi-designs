@@ -64,7 +64,7 @@ export const designs = [
     slide_engraving: "Terrain",
     rollmark_font: "None",
     dust_cover_cut: "Short Butler",
-    compensator: "No"
+    compensator: "None"
   },
   {
     design_name: "Buzzin",
