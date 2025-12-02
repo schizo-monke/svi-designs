@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { getUniqueValues, searchDesigns } from '../data/designs';
+import { getUniqueValues, getValueCounts, searchDesigns } from '../data/designs';
 import './SearchPage.css';
 
 // Helper function to create intelligent acronyms
@@ -188,6 +188,25 @@ const SearchPage = () => {
   const dustCoverCuts = useMemo(() => getUniqueValues('dust_cover_cut'), []);
   const compensators = useMemo(() => getUniqueValues('compensator'), []);
 
+  // Get counts for each filter field
+  const barrelLengthCounts = useMemo(() => getValueCounts('barrel_length'), []);
+  const dropCycleCounts = useMemo(() => getValueCounts('drop_cycle'), []);
+  const frameMaterialCounts = useMemo(() => getValueCounts('frame_material'), []);
+  const barrelTypeCounts = useMemo(() => getValueCounts('barrel_type'), []);
+  const gripTextureCounts = useMemo(() => getValueCounts('grip_texture'), []);
+  const triggerGuardCounts = useMemo(() => getValueCounts('trigger_guard'), []);
+  const gripLengthCounts = useMemo(() => getValueCounts('grip_length'), []);
+  const slideSerrationCounts = useMemo(() => getValueCounts('slide_serrations'), []);
+  const fullSlideSerrationCounts = useMemo(() => getValueCounts('full_slide_serrations'), []);
+  const cheekbusterCounts = useMemo(() => getValueCounts('cheekbuster'), []);
+  const ironsDotCounts = useMemo(() => getValueCounts('irons_dot'), []);
+  const tumbledGripCounts = useMemo(() => getValueCounts('tumbled_grip'), []);
+  const blastPatternCounts = useMemo(() => getValueCounts('blast_pattern'), []);
+  const slideEngravingCounts = useMemo(() => getValueCounts('slide_engraving'), []);
+  const rollmarkFontCounts = useMemo(() => getValueCounts('rollmark_font'), []);
+  const dustCoverCutCounts = useMemo(() => getValueCounts('dust_cover_cut'), []);
+  const compensatorCounts = useMemo(() => getValueCounts('compensator'), []);
+
   // Search results
   const searchResults = useMemo(() => {
     const results = searchDesigns(searchQuery, filters);
@@ -300,7 +319,7 @@ const SearchPage = () => {
               >
                 <option value="">All Lengths</option>
                 {barrelLengths.map(length => (
-                  <option key={length} value={length}>{length}</option>
+                  <option key={length} value={length}>{length} ({barrelLengthCounts[length] || 0})</option>
                 ))}
               </select>
             </div>
@@ -314,7 +333,7 @@ const SearchPage = () => {
               >
                 <option value="">All Types</option>
                 {barrelTypes.map(type => (
-                  <option key={type} value={type}>{type}</option>
+                  <option key={type} value={type}>{type} ({barrelTypeCounts[type] || 0})</option>
                 ))}
               </select>
             </div>
@@ -328,7 +347,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {cheekbusters.map(cheekbuster => (
-                  <option key={cheekbuster} value={cheekbuster}>{cheekbuster}</option>
+                  <option key={cheekbuster} value={cheekbuster}>{cheekbuster} ({cheekbusterCounts[cheekbuster] || 0})</option>
                 ))}
               </select>
             </div>
@@ -342,7 +361,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {compensators.map(comp => (
-                  <option key={comp} value={comp}>{comp}</option>
+                  <option key={comp} value={comp}>{comp} ({compensatorCounts[comp] || 0})</option>
                 ))}
               </select>
             </div>
@@ -360,7 +379,7 @@ const SearchPage = () => {
               >
                 <option value="">All Slide Serrations</option>
                 {slideSerrations.map(serration => (
-                  <option key={serration} value={serration}>{serration}</option>
+                  <option key={serration} value={serration}>{serration} ({slideSerrationCounts[serration] || 0})</option>
                 ))}
               </select>
             </div>
@@ -374,7 +393,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {fullSlideSerrations.map(serration => (
-                  <option key={serration} value={serration}>{serration}</option>
+                  <option key={serration} value={serration}>{serration} ({fullSlideSerrationCounts[serration] || 0})</option>
                 ))}
               </select>
             </div>
@@ -388,7 +407,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {slideEngravings.map(engraving => (
-                  <option key={engraving} value={engraving}>{engraving}</option>
+                  <option key={engraving} value={engraving}>{engraving} ({slideEngravingCounts[engraving] || 0})</option>
                 ))}
               </select>
             </div>
@@ -402,7 +421,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {rollmarkFonts.map(font => (
-                  <option key={font} value={font}>{font}</option>
+                  <option key={font} value={font}>{font} ({rollmarkFontCounts[font] || 0})</option>
                 ))}
               </select>
             </div>
@@ -420,7 +439,7 @@ const SearchPage = () => {
               >
                 <option value="">All Materials</option>
                 {frameMaterials.map(material => (
-                  <option key={material} value={material}>{material}</option>
+                  <option key={material} value={material}>{material} ({frameMaterialCounts[material] || 0})</option>
                 ))}
               </select>
             </div>
@@ -434,7 +453,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {dustCoverCuts.map(cut => (
-                  <option key={cut} value={cut}>{cut}</option>
+                  <option key={cut} value={cut}>{cut} ({dustCoverCutCounts[cut] || 0})</option>
                 ))}
               </select>
             </div>
@@ -452,7 +471,7 @@ const SearchPage = () => {
               >
                 <option value="">All Textures</option>
                 {gripTextures.map(texture => (
-                  <option key={texture} value={texture}>{texture}</option>
+                  <option key={texture} value={texture}>{texture} ({gripTextureCounts[texture] || 0})</option>
                 ))}
               </select>
             </div>
@@ -466,7 +485,7 @@ const SearchPage = () => {
               >
                 <option value="">All Lengths</option>
                 {gripLengths.map(length => (
-                  <option key={length} value={length}>{length}</option>
+                  <option key={length} value={length}>{length} ({gripLengthCounts[length] || 0})</option>
                 ))}
               </select>
             </div>
@@ -480,7 +499,7 @@ const SearchPage = () => {
               >
                 <option value="">All Guards</option>
                 {triggerGuards.map(guard => (
-                  <option key={guard} value={guard}>{guard}</option>
+                  <option key={guard} value={guard}>{guard} ({triggerGuardCounts[guard] || 0})</option>
                 ))}
               </select>
             </div>
@@ -494,7 +513,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {tumbledGrips.map(grip => (
-                  <option key={grip} value={grip}>{grip}</option>
+                  <option key={grip} value={grip}>{grip} ({tumbledGripCounts[grip] || 0})</option>
                 ))}
               </select>
             </div>
@@ -512,7 +531,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {ironsDots.map(irons => (
-                  <option key={irons} value={irons}>{irons}</option>
+                  <option key={irons} value={irons}>{irons} ({ironsDotCounts[irons] || 0})</option>
                 ))}
               </select>
             </div>
@@ -526,7 +545,7 @@ const SearchPage = () => {
               >
                 <option value="">All</option>
                 {blastPatterns.map(pattern => (
-                  <option key={pattern} value={pattern}>{pattern}</option>
+                  <option key={pattern} value={pattern}>{pattern} ({blastPatternCounts[pattern] || 0})</option>
                 ))}
               </select>
             </div>
@@ -540,7 +559,7 @@ const SearchPage = () => {
               >
                 <option value="">All Cycles</option>
                 {dropCycles.map(cycle => (
-                  <option key={cycle} value={cycle}>Cycle {cycle}</option>
+                  <option key={cycle} value={cycle}>Cycle {cycle} ({dropCycleCounts[cycle] || 0})</option>
                 ))}
               </select>
             </div>
