@@ -57,6 +57,7 @@ export enum SlideSerrations {
   LPI_CHECKERING_30 = "30 LPI Checkering",
   SEVEN_TWENTY = "720",
   SEVEN_TWENTY_SLICED = "720 Sliced",
+  BEE_WING = "Bee-Wing",
   BONKERS = "Bonkers",
   CHECKERED_DIAMONDS = "Checkered Diamonds",
   CHECKERED_GILLS = "Checkered Gills",
@@ -88,12 +89,12 @@ export enum IronsDot {
 
 export enum BlastPattern {
   NO = "No",
-  YES = "Yes",
-  F40 = "F40"
+  YES = "Yes"
 }
 
 export enum SlideEngraving {
   DNA = "DNA",
+  FERRARI = "Ferrari",
   GHOST_MOBIUS = "Ghost/Mobius",
   MOBIUS = "Mobius",
   NONE = "None",
@@ -113,7 +114,8 @@ export enum DustCoverCut {
   INFINITY_EXTENDED = "Infinity Extended Dust Cover",
   LONG_BUTLER = "Long Butler",
   MEAT_TENDERIZER = "Meat Tenderizer",
-  SHORT_BUTLER = "Short Butler"
+  SHORT_BUTLER = "Short Butler",
+  SHORT_BUTLER_FULL_SLIDE = "Short Butler w/ Full Slide"
 }
 
 export enum Compensator {
@@ -186,8 +188,8 @@ export const designs: Design[] = [
     cheekbuster: YesNo.NO,
     irons_dot: IronsDot.DOT,
     tumbled_grip: YesNo.NO,
-    blast_pattern: BlastPattern.F40,
-    slide_engraving: SlideEngraving.NONE,
+    blast_pattern: BlastPattern.NO,
+    slide_engraving: SlideEngraving.FERRARI,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE
@@ -209,7 +211,7 @@ export const designs: Design[] = [
     irons_dot: IronsDot.DOT,
     tumbled_grip: YesNo.NO,
     blast_pattern: BlastPattern.NO,
-    slide_engraving: SlideEngraving.TERRAIN,
+    slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.NONE
@@ -225,7 +227,7 @@ export const designs: Design[] = [
     grip_texture: GripTexture.HONEY_SKATER,
     trigger_guard: TriggerGuard.INFINITY_TRADITIONAL_SQUARE,
     grip_length: GripLength.FULL_SIZE,
-    slide_serrations: SlideSerrations.SEVEN_TWENTY_SLICED,
+    slide_serrations: SlideSerrations.BEE_WING,
     full_slide_serrations: YesNo.YES,
     cheekbuster: YesNo.NO,
     irons_dot: IronsDot.DOT,
@@ -233,8 +235,8 @@ export const designs: Design[] = [
     blast_pattern: BlastPattern.NO,
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
-    dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    dust_cover_cut: DustCoverCut.SHORT_BUTLER_FULL_SLIDE,
+    compensator: Compensator.IMM
   },
   {
     design_name: "Odd Bob",
