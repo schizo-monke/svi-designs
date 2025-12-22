@@ -525,7 +525,7 @@ export const designs: Design[] = [
     blast_pattern: BlastPattern.NO,
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.TEAM_INFINITY_FONT,
-    dust_cover_cut: DustCoverCut.SHORT_BUTLER,
+    dust_cover_cut: DustCoverCut.SHORT_BUTLER_FULL_SLIDE,
     compensator: "IMM"
   },
   {
