@@ -429,6 +429,20 @@
     padding: 1rem 0.5rem;
   }
 
+  .design-image-large {
+    height: auto;
+    max-height: 400px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .design-image-large img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+  }
+
   .detail-header {
     margin-bottom: 1rem;
   }

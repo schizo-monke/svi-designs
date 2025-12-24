@@ -77,6 +77,11 @@ const DesignDetail = () => {
   return (
     <div className="design-detail">
       <div className="detail-content">
+        <div className="detail-header">
+          <button className="back-button" onClick={() => navigate('/')}>
+            ← Back to Search
+          </button>
+        </div>
         {/* Design Image */}
         <div className="design-image-large">
           <img

@@ -338,7 +338,7 @@
 
   .spec-item {
     font-size: 0.78rem;
-    padding: 0.3rem 0.45rem;
+    padding: 0.35rem 0.5rem;
   }
 }
 
@@ -453,27 +453,26 @@
 
 .spec-item {
   background: linear-gradient(135deg, #f0f8f0 0%, #ffffff 100%);
-  padding: 0.3rem 0.5rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 4px;
   font-size: 0.8rem;
   color: #1a5f1a;
   font-weight: 500;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: 24px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  height: 75px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   cursor: help;
   transition: all 0.2s ease;
   position: relative;
   max-width: 100%;
-  word-break: break-word;
   gap: 0.2rem;
   border: 1px solid #c8e6c9;
+  overflow: hidden;
 }
 
 .spec-item:hover {
@@ -489,12 +488,20 @@
   color: #1a5f1a;
   text-transform: uppercase;
   letter-spacing: 0.2px;
+  align-self: flex-start;
+  justify-content: flex-start;
 }
 
 .spec-value {
   font-size: 0.65rem;
   font-weight: 600;
   color: #0d3d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  width: 100%;
 }
 
 .spec-label.transparent {
@@ -611,7 +618,7 @@
 
   .spec-item {
     font-size: 0.75rem;
-    padding: 0.25rem 0.4rem;
-    min-height: 20px;
+    padding: 0.35rem 0.5rem;
+    height: 75px;
   }
 }
