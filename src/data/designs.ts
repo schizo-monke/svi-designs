@@ -224,7 +224,7 @@ export const designs: Design[] = [
     barrel_length: BarrelLength.THREE_SEVENTY_FIVE,
     release_date: "2026-02-11",
     drop_cycle: "16",
-    frame_material: FrameMaterial.STEEL,
+    frame_material: FrameMaterial.TITANIUM,
     barrel_type: BarrelType.HYBRID,
     grip_texture: GripTexture.NEXUS,
     trigger_guard: TriggerGuard.INFINITY_EXTENDED,
