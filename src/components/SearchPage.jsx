@@ -5,7 +5,7 @@ import './SearchPage.css';
 
 // Helper function to create intelligent acronyms
 const createAcronym = (text) => {
-  if (!text || text.length <= 18) return text;
+  if (!text || text.length <= 18 || (typeof text) != 'string') return text;
 
   // Common patterns and their acronyms
   const patterns = {
@@ -52,7 +52,7 @@ const createAcronym = (text) => {
 
   // Try to find exact matches first
   for (const [pattern, acronym] of Object.entries(patterns)) {
-    if (text.includes(pattern)) {
+    if (text && text.includes(pattern)) {
       return text.replace(pattern, acronym);
     }
   }
