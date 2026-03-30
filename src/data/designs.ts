@@ -206,7 +206,7 @@ export const designs: Design[] = [
     barrel_type: BarrelType.HYBRID,
     grip_texture: GripTexture.SPACE_INVADER,
     trigger_guard: TriggerGuard.INFINITY_TRADITIONAL_SQUARE,
-    grip_length: GripLength.COMPACT,
+    grip_length: GripLength.FULL_SIZE,
     slide_serrations: SlideSerrations.SPACE_INVADER,
     full_slide_serrations: YesNo.YES,
     cheekbuster: YesNo.NO,
