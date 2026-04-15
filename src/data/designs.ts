@@ -167,7 +167,7 @@ export const designs: Design[] = [
     full_slide_serrations: YesNo.NO,
     cheekbuster: YesNo.NO,
     irons_dot: IronsDot.DOT,
-    tumbled_grip: YesNo.NO,
+    tumbled_grip: YesNo.YES,
     blast_pattern: BlastPattern.NO,
     slide_engraving: SlideEngraving.GHOST_MOBIUS,
     rollmark_font: RollmarkFont.NONE,
