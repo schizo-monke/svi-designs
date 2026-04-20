@@ -153,6 +153,28 @@ export interface Design {
 // Design data array with enum values
 export const designs: Design[] = [
   {
+    design_name: "Bikini Bottom",
+    index: 206,
+    barrel_length: BarrelLength.FIVE,
+    release_date: "2026-04-20",
+    drop_cycle: "17",
+    frame_material: FrameMaterial.STEEL,
+    barrel_type: BarrelType.HYBRID,
+    grip_texture: GripTexture.NEXUS,
+    trigger_guard: TriggerGuard.INFINITY_TRADITIONAL_SQUARE,
+    grip_length: GripLength.FULL_SIZE,
+    slide_serrations: SlideSerrations.NEXUS,
+    full_slide_serrations: YesNo.NO,
+    cheekbuster: YesNo.NO,
+    irons_dot: IronsDot.DOT,
+    tumbled_grip: YesNo.NO,
+    blast_pattern: BlastPattern.NO,
+    slide_engraving: SlideEngraving.NONE,
+    rollmark_font: RollmarkFont.INFINITY_FONT,
+    dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
+    compensator: Compensator.NONE
+  },
+  {
     design_name: "Silver Ghost",
     index: 205,
     barrel_length: BarrelLength.FOUR_FIFTY,
