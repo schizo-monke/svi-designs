@@ -80,8 +80,8 @@ const StatsPage = () => {
       const data = Object.entries(counts)
         .map(([label, count]) => ({ label, count }))
         .sort((a, b) => b.count - a.count);
-      return { key, label, data, total: data.reduce((s, d) => s + d.count, 0) };
-    });
+      return { key, label, data, cardinality: data.length, total: data.reduce((s, d) => s + d.count, 0) };
+    }).sort((a, b) => b.cardinality - a.cardinality);
   }, []);
 
   return (
