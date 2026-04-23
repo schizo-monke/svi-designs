@@ -615,84 +615,78 @@ const SearchPage = () => {
                     <div className="design-info">
                       <h3>{design.design_name}</h3>
                       <div className="design-specs">
-                        <div className="spec-column">
-                          {design.barrel_length && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>Barrel Length:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>{createAcronym(design.barrel_length)}"</span>
-                            </div>
-                          )}
-                          {design.barrel_type && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>Barrel Type:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>{createAcronym(design.barrel_type)}</span>
-                            </div>
-                          )}
-                          {design.frame_material && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>Frame Material:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>{createAcronym(design.frame_material)}</span>
-                            </div>
-                          )}
-                          {design.grip_texture && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>Grip Texture:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>{createAcronym(design.grip_texture)}</span>
-                            </div>
-                          )}
-                        </div>
-                        <div className="spec-column">
-                          {design.trigger_guard && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>Trigger Guard:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>{createAcronym(design.trigger_guard)}</span>
-                            </div>
-                          )}
-                          {design.grip_length && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>Grip Length:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>{createAcronym(design.grip_length)}</span>
-                            </div>
-                          )}
-                          {design.slide_serrations && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>Slide Serrations:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>{createAcronym(design.slide_serrations)}</span>
-                            </div>
-                          )}
-                          {design.irons_dot && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>Irons/Dot:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>{createAcronym(design.irons_dot)}</span>
-                            </div>
-                          )}
-                        </div>
-                        <div className="spec-column">
-                          {design.rollmark_font && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>Rollmark Font:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>{createAcronym(design.rollmark_font)}</span>
-                            </div>
-                          )}
-                          {design.compensator && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>Compensator:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>{createAcronym(design.compensator)}</span>
-                            </div>
-                          )}
-                          {design.release_date && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>Release Date:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>{createAcronym(design.release_date)}</span>
-                            </div>
-                          )}
-                          {design.drop_cycle && (
-                            <div className={`spec-item ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>
-                              <span className={`spec-label ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Drop Cycle:</span>
-                              <span className={`spec-value ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Cycle {createAcronym(design.drop_cycle)}</span>
-                            </div>
-                          )}
-                        </div>
+                        {design.barrel_length && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>Barrel Length</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.barrel_length) ? 'transparent' : ''}`}>{design.barrel_length}"</span>
+                          </div>
+                        )}
+                        {design.barrel_type && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>Barrel Type</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.barrel_type) ? 'transparent' : ''}`}>{design.barrel_type}</span>
+                          </div>
+                        )}
+                        {design.frame_material && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>Frame</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.frame_material) ? 'transparent' : ''}`}>{design.frame_material}</span>
+                          </div>
+                        )}
+                        {design.grip_texture && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>Grip Texture</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>{design.grip_texture}</span>
+                          </div>
+                        )}
+                        {design.trigger_guard && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>Trigger Guard</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.trigger_guard) ? 'transparent' : ''}`}>{design.trigger_guard === 'Infinity Traditional Square' ? 'ITS' : design.trigger_guard}</span>
+                          </div>
+                        )}
+                        {design.grip_length && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>Grip Length</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.grip_length) ? 'transparent' : ''}`}>{design.grip_length}</span>
+                          </div>
+                        )}
+                        {design.slide_serrations && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>Slide Serrations</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>{design.slide_serrations === '30 LPI Checkering' ? '30 LPI' : design.slide_serrations}</span>
+                          </div>
+                        )}
+                        {design.irons_dot && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>Irons/Dot</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.irons_dot) ? 'transparent' : ''}`}>{design.irons_dot}</span>
+                          </div>
+                        )}
+                        {design.rollmark_font && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>Rollmark Font</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>{design.rollmark_font}</span>
+                          </div>
+                        )}
+                        {design.compensator && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>Compensator</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>{design.compensator}</span>
+                          </div>
+                        )}
+                        {design.release_date && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>Release Date</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.release_date) ? 'transparent' : ''}`}>{design.release_date}</span>
+                          </div>
+                        )}
+                        {design.drop_cycle && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Drop Cycle</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Cycle {design.drop_cycle}</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
