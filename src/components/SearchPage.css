@@ -223,6 +223,24 @@
   font-size: 1.05rem;
 }
 
+.sort-order-btn {
+  align-self: center;
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  color: var(--results-highlight);
+  border: 1.5px solid var(--accent-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sort-order-btn:hover {
+  background: var(--accent-color);
+  color: var(--btn-primary-text);
+}
+
 .search-results {
   padding: 2rem;
   display: flex;

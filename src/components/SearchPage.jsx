@@ -124,6 +124,7 @@ const SearchPage = () => {
   // Initialize state from URL parameters
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('q') || '');
   const [filters, setFilters] = useState(() => getFiltersFromUrl(searchParams));
+  const [sortOrder, setSortOrder] = useState('desc');
 
   // Track previous URL to detect external changes (back/forward buttons)
   const prevUrlRef = useRef(searchParams.toString());
@@ -210,17 +211,14 @@ const SearchPage = () => {
   // Search results
   const searchResults = useMemo(() => {
     const results = searchDesigns(searchQuery, filters);
-    // Sort by release date descending (newest first)
     return results.sort((a, b) => {
-      // Handle empty release dates by putting them at the end
       if (!a.release_date && !b.release_date) return 0;
       if (!a.release_date) return 1;
       if (!b.release_date) return -1;
-
-      // Compare dates (newest first)
-      return new Date(b.release_date) - new Date(a.release_date);
+      const diff = new Date(a.release_date) - new Date(b.release_date);
+      return sortOrder === 'desc' ? -diff : diff;
     });
-  }, [searchQuery, filters]);
+  }, [searchQuery, filters, sortOrder]);
 
   // Calculate mean days between designs
   const meanDaysBetween = useMemo(() => {
@@ -578,6 +576,12 @@ const SearchPage = () => {
               Mean days between designs: <strong>{meanDaysBetween}</strong> days
             </p>
           )}
+          <button
+            className="sort-order-btn"
+            onClick={() => setSortOrder(prev => prev === 'desc' ? 'asc' : 'desc')}
+          >
+            Date {sortOrder === 'desc' ? '↓ Newest' : '↑ Oldest'}
+          </button>
         </div>
 
         {/* Search Results */}
