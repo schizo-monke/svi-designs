@@ -1,5 +1,6 @@
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import CalendarPage from './components/CalendarPage';
 import DesignDetail from './components/DesignDetail';
 import SearchPage from './components/SearchPage';
 import StatsPage from './components/StatsPage';
@@ -17,6 +18,7 @@ function App() {
             <nav className="app-nav">
               <Link to="/" className="app-nav-link">Designs</Link>
               <Link to="/stats" className="app-nav-link">Statistics</Link>
+              <Link to="/calendar" className="app-nav-link">Calendar</Link>
             </nav>
           </header>
           <main>
@@ -24,6 +26,7 @@ function App() {
               <Route path="/" element={<SearchPage />} />
               <Route path="/design/:index" element={<DesignDetail />} />
               <Route path="/stats" element={<StatsPage />} />
+              <Route path="/calendar" element={<CalendarPage />} />
             </Routes>
           </main>
         </div>
