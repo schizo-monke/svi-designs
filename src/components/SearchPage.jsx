@@ -84,6 +84,23 @@ const shouldMakeTransparent = (value) => {
   return value === "No" || value === "None";
 };
 
+// Remove words from values that are already implied by their label
+const formatCardValue = (field, value) => {
+  if (!value) return value;
+  switch (field) {
+    case 'grip_texture':
+      if (value === 'Micropocket Standard') return 'Micro. Std.';
+      if (value === 'Micropocket Aggressive') return 'Micro. Agg.';
+      return value;
+    case 'rollmark_font':
+      return value.replace(' Font', '');
+    case 'slide_serrations':
+      return value.replace(' Serrations', '').replace(' Checkering', '');
+    default:
+      return value;
+  }
+};
+
 const SearchPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -640,7 +657,7 @@ const SearchPage = () => {
                         {design.grip_texture && (
                           <div className={`spec-item ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>
                             <span className={`spec-label ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>Grip Texture</span>
-                            <span className={`spec-value ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>{design.grip_texture}</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.grip_texture) ? 'transparent' : ''}`}>{formatCardValue('grip_texture', design.grip_texture)}</span>
                           </div>
                         )}
                         {design.trigger_guard && (
@@ -658,7 +675,7 @@ const SearchPage = () => {
                         {design.slide_serrations && (
                           <div className={`spec-item ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>
                             <span className={`spec-label ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>Slide Serrations</span>
-                            <span className={`spec-value ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>{design.slide_serrations === '30 LPI Checkering' ? '30 LPI' : design.slide_serrations}</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.slide_serrations) ? 'transparent' : ''}`}>{formatCardValue('slide_serrations', design.slide_serrations)}</span>
                           </div>
                         )}
                         {design.irons_dot && (
@@ -670,7 +687,7 @@ const SearchPage = () => {
                         {design.rollmark_font && (
                           <div className={`spec-item ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>
                             <span className={`spec-label ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>Rollmark Font</span>
-                            <span className={`spec-value ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>{design.rollmark_font}</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.rollmark_font) ? 'transparent' : ''}`}>{formatCardValue('rollmark_font', design.rollmark_font)}</span>
                           </div>
                         )}
                         {design.compensator && (
@@ -688,7 +705,7 @@ const SearchPage = () => {
                         {design.drop_cycle && (
                           <div className={`spec-item ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>
                             <span className={`spec-label ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Drop Cycle</span>
-                            <span className={`spec-value ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>Cycle {design.drop_cycle}</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.drop_cycle) ? 'transparent' : ''}`}>{design.drop_cycle}</span>
                           </div>
                         )}
                       </div>
