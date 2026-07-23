@@ -266,6 +266,21 @@ const SearchPage = () => {
     return Math.round(mean * 10) / 10; // Round to 1 decimal place
   }, [searchResults]);
 
+  // Calculate days since the latest design
+  const daysSinceLastDesign = useMemo(() => {
+    const today = new Date();
+    const designsWithDates = searchResults
+      .filter(design => design.release_date && design.release_date.trim() !== '')
+      .map(design => new Date(design.release_date))
+      .filter(date => date <= today);
+
+    if (designsWithDates.length === 0) return null;
+
+    const latest = new Date(Math.max(...designsWithDates));
+    const diff = Math.floor((today - latest) / (1000 * 60 * 60 * 24));
+    return diff;
+  }, [searchResults]);
+
   const handleFilterChange = (field, value) => {
     setFilters(prev => ({
       ...prev,
@@ -591,6 +606,11 @@ const SearchPage = () => {
           {meanDaysBetween !== null && (
             <p className="mean-days-metric">
               Mean days between designs: <strong>{meanDaysBetween}</strong> days
+            </p>
+          )}
+          {daysSinceLastDesign !== null && (
+            <p className="mean-days-metric">
+              Days since last design: <strong>{daysSinceLastDesign}</strong> days
             </p>
           )}
           <button
