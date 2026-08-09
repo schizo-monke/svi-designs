@@ -239,7 +239,7 @@ export const designs: Design[] = [
     blast_pattern: YesNo.NO,
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
-    dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
+    dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.NONE,
   },
   {
@@ -613,7 +613,7 @@ export const designs: Design[] = [
     blast_pattern: BlastPattern.NO,
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
-    dust_cover_cut: DustCoverCut.SHORT_BUTLER,
+    dust_cover_cut: DustCoverCut.LONG_BUTLER,
     compensator: Compensator.NONE
   },
   {
