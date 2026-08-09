@@ -96,7 +96,6 @@ export enum BlastPattern {
 }
 
 export enum SlideEngraving {
-  BLINKERS = "Blinkers",
   DNA = "DNA",
   FERRARI = "Ferrari",
   GHOST_MOBIUS = "Ghost/Mobius",
@@ -104,7 +103,8 @@ export enum SlideEngraving {
   NONE = "None",
   SKULLS = "Skulls",
   STARS_STRIPES = "Stars/Stripes",
-  TERRAIN = "Terrain"
+  TERRAIN = "Terrain",
+  WINGMAN = "Wingman"
 }
 
 export enum RollmarkFont {
@@ -171,7 +171,7 @@ export const designs: Design[] = [
     irons_dot: IronsDot.DOT,
     tumbled_grip: YesNo.NO,
     blast_pattern: YesNo.NO,
-    slide_engraving: SlideEngraving.BLINKERS,
+    slide_engraving: SlideEngraving.WINGMAN,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
