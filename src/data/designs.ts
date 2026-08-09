@@ -103,8 +103,7 @@ export enum SlideEngraving {
   NONE = "None",
   SKULLS = "Skulls",
   STARS_STRIPES = "Stars/Stripes",
-  TERRAIN = "Terrain",
-  WINGMAN = "Wingman"
+  TERRAIN = "Terrain"
 }
 
 export enum RollmarkFont {
@@ -165,13 +164,13 @@ export const designs: Design[] = [
     grip_texture: GripTexture.NEXUS,
     trigger_guard: TriggerGuard.INFINITY_EXTENDED,
     grip_length: GripLength.FULL_SIZE,
-    slide_serrations: SlideSerrations.NEXUS,
+    slide_serrations: SlideSerrations.WINGMAN,
     full_slide_serrations: YesNo.YES,
     cheekbuster: YesNo.NO,
     irons_dot: IronsDot.DOT,
     tumbled_grip: YesNo.NO,
     blast_pattern: YesNo.NO,
-    slide_engraving: SlideEngraving.WINGMAN,
+    slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
