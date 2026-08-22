@@ -27,6 +27,7 @@ const FIELDS = [
   { key: 'irons_dot', label: 'Irons / Dot' },
   { key: 'tumbled_grip', label: 'Tumbled Grip' },
   { key: 'blast_pattern', label: 'Blast Pattern' },
+  { key: 'free_creative', label: 'Free Creative' },
 ];
 
 const BarChart = ({ data, title }) => {

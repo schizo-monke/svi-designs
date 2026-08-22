@@ -124,7 +124,8 @@ const SearchPage = () => {
       slide_engraving: params.get('slide_engraving') || '',
       rollmark_font: params.get('rollmark_font') || '',
       dust_cover_cut: params.get('dust_cover_cut') || '',
-      compensator: params.get('compensator') || ''
+      compensator: params.get('compensator') || '',
+      free_creative: params.get('free_creative') || ''
     };
   };
 
@@ -205,6 +206,7 @@ const SearchPage = () => {
   const rollmarkFonts = useMemo(() => getUniqueValues('rollmark_font'), []);
   const dustCoverCuts = useMemo(() => getUniqueValues('dust_cover_cut'), []);
   const compensators = useMemo(() => getUniqueValues('compensator'), []);
+  const freeCreatives = useMemo(() => getUniqueValues('free_creative'), []);
 
   // Get counts for each filter field
   const barrelLengthCounts = useMemo(() => getValueCounts('barrel_length'), []);
@@ -224,6 +226,7 @@ const SearchPage = () => {
   const rollmarkFontCounts = useMemo(() => getValueCounts('rollmark_font'), []);
   const dustCoverCutCounts = useMemo(() => getValueCounts('dust_cover_cut'), []);
   const compensatorCounts = useMemo(() => getValueCounts('compensator'), []);
+  const freeCreativeCounts = useMemo(() => getValueCounts('free_creative'), []);
 
   // Search results
   const searchResults = useMemo(() => {
@@ -307,7 +310,8 @@ const SearchPage = () => {
       slide_engraving: '',
       rollmark_font: '',
       dust_cover_cut: '',
-      compensator: ''
+      compensator: '',
+      free_creative: ''
     });
   };
 
@@ -395,6 +399,7 @@ const SearchPage = () => {
                 ))}
               </select>
             </div>
+
           </div>
 
           {/* Slide Section */}
@@ -581,6 +586,20 @@ const SearchPage = () => {
             </div>
 
             <div className="filter-group">
+              <label htmlFor="free-creative">Free Creative:</label>
+              <select
+                id="free-creative"
+                value={filters.free_creative}
+                onChange={(e) => handleFilterChange('free_creative', e.target.value)}
+              >
+                <option value="">All</option>
+                {freeCreatives.map(fc => (
+                  <option key={fc} value={fc}>{fc} ({freeCreativeCounts[fc] || 0})</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="filter-group">
               <label htmlFor="drop-cycle">Drop Cycle:</label>
               <select
                 id="drop-cycle"
@@ -714,6 +733,12 @@ const SearchPage = () => {
                           <div className={`spec-item ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>
                             <span className={`spec-label ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>Compensator</span>
                             <span className={`spec-value ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>{design.compensator}</span>
+                          </div>
+                        )}
+                        {design.free_creative && (
+                          <div className={`spec-item ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>
+                            <span className={`spec-label ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>Free Creative</span>
+                            <span className={`spec-value ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>{design.free_creative}</span>
                           </div>
                         )}
                         {design.release_date && (

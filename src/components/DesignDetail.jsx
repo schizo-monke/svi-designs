@@ -71,6 +71,7 @@ const DesignDetail = () => {
     { label: 'Rollmark Font', value: design.rollmark_font || 'Not specified' },
     { label: 'Dust Cover Cut', value: design.dust_cover_cut || 'Not specified' },
     { label: 'Compensator', value: design.compensator || 'Not specified' },
+    { label: 'Free Creative', value: design.free_creative || 'Not specified' },
     { label: 'Release Date', value: design.release_date || 'Not specified' }
   ];
 
@@ -202,6 +203,12 @@ const DesignDetail = () => {
                 <div className={`spec-item ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>
                   <span className={`spec-label ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>Compensator:</span>
                   <span className={`spec-value ${shouldMakeTransparent(design.compensator) ? 'transparent' : ''}`}>{design.compensator}</span>
+                </div>
+              )}
+              {design.free_creative && (
+                <div className={`spec-item ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>
+                  <span className={`spec-label ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>Free Creative:</span>
+                  <span className={`spec-value ${shouldMakeTransparent(design.free_creative) ? 'transparent' : ''}`}>{design.free_creative}</span>
                 </div>
               )}
               {design.release_date && (

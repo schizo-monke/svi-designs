@@ -151,6 +151,7 @@ export interface Design {
   rollmark_font: RollmarkFont | "";
   dust_cover_cut: DustCoverCut | "";
   compensator: Compensator | "";
+  free_creative: YesNo | "";
 }
 
 // Design data array with enum values
@@ -175,7 +176,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.YES
   },
   {
     design_name: "Blinkers",
@@ -198,6 +200,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Red Velvet",
@@ -220,6 +223,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Memoria",
@@ -242,6 +246,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bacon",
@@ -264,6 +269,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Silent Bob",
@@ -286,6 +292,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Chill Bill",
@@ -307,7 +314,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.IMM
+    compensator: Compensator.IMM,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Pinnacle P",
@@ -329,7 +337,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Zombies",
@@ -351,7 +360,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Burning Blue",
@@ -373,7 +383,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bette Davis",
@@ -395,7 +406,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bikini Bottom",
@@ -417,7 +429,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Silver Ghost",
@@ -440,6 +453,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.IMM,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Lady Bird",
@@ -462,6 +476,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Fried Rice",
@@ -484,6 +499,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "S'Mores",
@@ -506,6 +522,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Victory Lap",
@@ -528,6 +545,7 @@ export const designs: Design[] = [
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
     compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "88 Love",
@@ -549,7 +567,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.IMM
+    compensator: Compensator.IMM,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Peanut Butter Cup",
@@ -571,7 +590,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Obtuse",
@@ -593,7 +613,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Gun of The Year!",
@@ -615,7 +636,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Indigo",
@@ -637,7 +659,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Blackwing",
@@ -659,7 +682,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "F40",
@@ -681,7 +705,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.FERRARI,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "California Dreamin'",
@@ -703,7 +728,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Buzzin",
@@ -725,7 +751,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER_FULL_SLIDE,
-    compensator: Compensator.IMM
+    compensator: Compensator.IMM,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Odd Bob",
@@ -747,7 +774,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Rude Boy",
@@ -769,7 +797,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Marlboro Red",
@@ -791,7 +820,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Lemon",
@@ -813,7 +843,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Rare Air",
@@ -835,7 +866,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Goodums",
@@ -857,7 +889,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Space Bird",
@@ -879,7 +912,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Double G",
@@ -901,7 +935,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "B.I.A.",
@@ -923,7 +958,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bonkers",
@@ -946,7 +982,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Super Goose",
@@ -969,7 +1006,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Wasted Rainbow",
@@ -992,7 +1030,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Team",
@@ -1015,7 +1054,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.TEAM_INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER_FULL_SLIDE,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Atacms",
@@ -1038,7 +1078,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bees on Parade",
@@ -1061,7 +1102,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Blood Shot",
@@ -1084,7 +1126,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Baby Bones",
@@ -1107,7 +1150,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.SKULLS,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "Baby"
+    compensator: "Baby",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bread N Butter",
@@ -1130,7 +1174,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "88+P",
@@ -1153,7 +1198,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "War Power",
@@ -1176,7 +1222,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Ghost",
@@ -1199,7 +1246,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.GHOST_MOBIUS,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bird Flu",
@@ -1222,7 +1270,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Tina Turner",
@@ -1245,7 +1294,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "2BBL",
@@ -1268,7 +1318,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Skeeyee",
@@ -1291,7 +1342,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Speed Bird",
@@ -1314,7 +1366,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Iconic",
@@ -1337,7 +1390,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.MEAT_TENDERIZER,
-    compensator: "Baby"
+    compensator: "Baby",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Baby Bird",
@@ -1360,7 +1414,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Skellington",
@@ -1383,7 +1438,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Infiniverse",
@@ -1406,7 +1462,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.MOBIUS,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Red Ryder",
@@ -1429,7 +1486,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Perfect AF",
@@ -1452,7 +1510,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Lioness",
@@ -1475,7 +1534,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Wingman",
@@ -1498,7 +1558,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "VENOM 2",
@@ -1521,7 +1582,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Viscount",
@@ -1544,7 +1606,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Dirtybird",
@@ -1567,7 +1630,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Double D",
@@ -1590,7 +1654,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Drip",
@@ -1613,7 +1678,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "720",
@@ -1636,7 +1702,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "CB88",
@@ -1659,7 +1726,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Synical",
@@ -1682,7 +1750,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "TTG",
@@ -1705,7 +1774,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Encore",
@@ -1728,7 +1798,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.STARS_STRIPES,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Fast 2088",
@@ -1751,7 +1822,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Super C",
@@ -1774,7 +1846,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Venom",
@@ -1797,7 +1870,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Thunderbird",
@@ -1820,7 +1894,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Calvin's Cherry",
@@ -1843,7 +1918,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Double P",
@@ -1866,7 +1942,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "P1",
@@ -1889,7 +1966,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Sexy Red",
@@ -1912,7 +1990,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "King Camo",
@@ -1935,7 +2014,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "V88",
@@ -1958,7 +2038,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Corazòn",
@@ -1981,7 +2062,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "BDS69",
@@ -2004,7 +2086,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "RP5",
@@ -2027,7 +2110,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Honey Wars",
@@ -2050,7 +2134,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "G2 Corsa",
@@ -2073,7 +2158,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "The Gift",
@@ -2096,7 +2182,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Baby Monster",
@@ -2119,7 +2206,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Bone Crusher",
@@ -2142,7 +2230,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.SKULLS,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "IMM My Way",
@@ -2165,7 +2254,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Gratitude 94",
@@ -2188,7 +2278,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.DNA,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Formula 44",
@@ -2211,7 +2302,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Performance Retro",
@@ -2234,7 +2326,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Zootiez",
@@ -2257,7 +2350,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Terminator IMM Open",
@@ -2280,7 +2374,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.SHORT_BUTLER,
-    compensator: "IMM"
+    compensator: "IMM",
+    free_creative: YesNo.NO
   },
   {
     design_name: "Elevated Air",
@@ -2303,7 +2398,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Gallenson's Bonehead",
@@ -2326,7 +2422,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.SKULLS,
     rollmark_font: RollmarkFont.NONE,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Xcelerator Xpress",
@@ -2349,7 +2446,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.INFINITY_FONT,
     dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   },
   {
     design_name: "Formula K",
@@ -2372,7 +2470,8 @@ export const designs: Design[] = [
     slide_engraving: SlideEngraving.NONE,
     rollmark_font: RollmarkFont.ROADTEST,
     dust_cover_cut: DustCoverCut.LONG_BUTLER,
-    compensator: Compensator.NONE
+    compensator: Compensator.NONE,
+    free_creative: YesNo.NO
   }
 ] as Design[];
 
@@ -2400,6 +2499,7 @@ export interface DesignFilters {
   rollmark_font?: string;
   dust_cover_cut?: string;
   compensator?: string;
+  free_creative?: string;
 }
 
 // Helper function to search designs
@@ -2421,7 +2521,8 @@ export const searchDesigns = (query: string, filters: DesignFilters = {}): Desig
       (design.irons_dot && String(design.irons_dot).toLowerCase().includes(searchText)) ||
       (design.rollmark_font && String(design.rollmark_font).toLowerCase().includes(searchText)) ||
       (design.dust_cover_cut && String(design.dust_cover_cut).toLowerCase().includes(searchText)) ||
-      (design.compensator && String(design.compensator).toLowerCase().includes(searchText));
+      (design.compensator && String(design.compensator).toLowerCase().includes(searchText)) ||
+      (design.free_creative && String(design.free_creative).toLowerCase().includes(searchText));
 
     // Filter by specific characteristics
     const matchesBarrelLength = !filters.barrel_length || filters.barrel_length === '' || String(design.barrel_length) === filters.barrel_length;
@@ -2441,8 +2542,9 @@ export const searchDesigns = (query: string, filters: DesignFilters = {}): Desig
     const matchesRollmarkFont = !filters.rollmark_font || filters.rollmark_font === '' || String(design.rollmark_font) === filters.rollmark_font;
     const matchesDustCoverCut = !filters.dust_cover_cut || filters.dust_cover_cut === '' || String(design.dust_cover_cut) === filters.dust_cover_cut;
     const matchesCompensator = !filters.compensator || filters.compensator === '' || String(design.compensator) === filters.compensator;
+    const matchesFreeCreative = !filters.free_creative || filters.free_creative === '' || String(design.free_creative) === filters.free_creative;
 
-    return matchesText && matchesBarrelLength && matchesDropCycle && matchesFrameMaterial && matchesBarrelType && matchesGripTexture && matchesTriggerGuard && matchesGripLength && matchesSlideSerrations && matchesFullSlideSerrations && matchesCheekbuster && matchesIronsDot && matchesTumbledGrip && matchesBlastPattern && matchesSlideEngraving && matchesRollmarkFont && matchesDustCoverCut && matchesCompensator;
+    return matchesText && matchesBarrelLength && matchesDropCycle && matchesFrameMaterial && matchesBarrelType && matchesGripTexture && matchesTriggerGuard && matchesGripLength && matchesSlideSerrations && matchesFullSlideSerrations && matchesCheekbuster && matchesIronsDot && matchesTumbledGrip && matchesBlastPattern && matchesSlideEngraving && matchesRollmarkFont && matchesDustCoverCut && matchesCompensator && matchesFreeCreative;
   });
 
   return results;
