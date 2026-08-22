@@ -68,6 +68,7 @@ export enum SlideSerrations {
   GOOSEBUMPS = "Goosebumps",
   KAWS = "Kaws",
   KALEIDOSCOPE = "Kaleidoscope",
+  KALEIDOSCOPE_MICRO = "Kaleidoscope Micro",
   NEXUS = "Nexus",
   NONE = "None",
   PALMER = "Palmer",
@@ -154,6 +155,28 @@ export interface Design {
 
 // Design data array with enum values
 export const designs: Design[] = [
+  {
+    design_name: "FML 55",
+    index: 218,
+    barrel_length: BarrelLength.THREE_SEVENTY_FIVE,
+    release_date: "2026-08-25",
+    drop_cycle: "19",
+    frame_material: FrameMaterial.STEEL,
+    barrel_type: BarrelType.HYBRID,
+    grip_texture: GripTexture.KALEIDOSCOPE,
+    trigger_guard: TriggerGuard.INFINITY_TRADITIONAL_SQUARE,
+    grip_length: GripLength.FULL_SIZE,
+    slide_serrations: SlideSerrations.KALEIDOSCOPE_MICRO,
+    full_slide_serrations: YesNo.YES,
+    cheekbuster: YesNo.NO,
+    irons_dot: IronsDot.DOT,
+    tumbled_grip: YesNo.NO,
+    blast_pattern: BlastPattern.NO,
+    slide_engraving: SlideEngraving.NONE,
+    rollmark_font: RollmarkFont.NONE,
+    dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
+    compensator: Compensator.NONE
+  },
   {
     design_name: "Blinkers",
     index: 216,
