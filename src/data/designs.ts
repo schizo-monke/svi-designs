@@ -157,6 +157,29 @@ export interface Design {
 // Design data array with enum values
 export const designs: Design[] = [
   {
+    design_name: "FML 11",
+    index: 219,
+    barrel_length: BarrelLength.FOUR_FIFTY,
+    release_date: "2026-08-27",
+    drop_cycle: "19",
+    frame_material: FrameMaterial.STEEL,
+    barrel_type: BarrelType.HYBRID,
+    grip_texture: GripTexture.SPACE_INVADER,
+    trigger_guard: TriggerGuard.INFINITY_EXTENDED,
+    grip_length: GripLength.FULL_SIZE,
+    slide_serrations: SlideSerrations.SPACE_INVADER,
+    full_slide_serrations: YesNo.NO,
+    cheekbuster: YesNo.NO,
+    irons_dot: IronsDot.DOT,
+    tumbled_grip: YesNo.NO,
+    blast_pattern: BlastPattern.NO,
+    slide_engraving: SlideEngraving.NONE,
+    rollmark_font: RollmarkFont.INFINITY_FONT,
+    dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
+    compensator: Compensator.NONE,
+    free_creative: YesNo.YES
+  },
+  {
     design_name: "FML 55",
     index: 218,
     barrel_length: BarrelLength.THREE_SEVENTY_FIVE,
