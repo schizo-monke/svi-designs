@@ -157,6 +157,29 @@ export interface Design {
 // Design data array with enum values
 export const designs: Design[] = [
   {
+    design_name: "Snowfox",
+    index: 221,
+    barrel_length: BarrelLength.FIVE,
+    release_date: "2026-09-03",
+    drop_cycle: "19",
+    frame_material: FrameMaterial.STEEL,
+    barrel_type: BarrelType.HYBRID,
+    grip_texture: GripTexture.MACROPOCKET,
+    trigger_guard: TriggerGuard.INFINITY_TRADITIONAL_SQUARE,
+    grip_length: GripLength.FULL_SIZE,
+    slide_serrations: SlideSerrations.LPI_CHECKERING_30,
+    full_slide_serrations: YesNo.NO,
+    cheekbuster: YesNo.YES,
+    irons_dot: IronsDot.DOT,
+    tumbled_grip: YesNo.NO,
+    blast_pattern: BlastPattern.YES,
+    slide_engraving: SlideEngraving.NONE,
+    rollmark_font: RollmarkFont.INFINITY_FONT,
+    dust_cover_cut: DustCoverCut.INFINITY_EXTENDED,
+    compensator: Compensator.NONE,
+    free_creative: YesNo.YES
+  },
+  {
     design_name: "FML 44",
     index: 220,
     barrel_length: BarrelLength.THREE_SEVENTY_FIVE,
