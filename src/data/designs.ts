@@ -169,7 +169,7 @@ export const designs: Design[] = [
     grip_length: GripLength.FULL_SIZE,
     slide_serrations: SlideSerrations.LPI_CHECKERING_30,
     full_slide_serrations: YesNo.NO,
-    cheekbuster: YesNo.YES,
+    cheekbuster: YesNo.NO,
     irons_dot: IronsDot.DOT,
     tumbled_grip: YesNo.NO,
     blast_pattern: BlastPattern.YES,
